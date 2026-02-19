@@ -8,6 +8,7 @@ import {
   FaPhone,
 } from "react-icons/fa6";
 import styles from "./Footer.module.css";
+import { app_logo } from "../../data";
 
 const Footer: React.FC = () => {
   return (
@@ -19,10 +20,7 @@ const Footer: React.FC = () => {
               <div className={styles.logo}>
                 {/* <div className={styles.logoIcon}>//</div> */}
 
-                <img
-                  src="https://nidripcentralelectronics.co.uk/wp-content/uploads/2025/08/887693ED-AB70-4CCC-9BA4-EC73CEA3F8C6-1-2048x686.png"
-                  className={styles.logo}
-                />
+                <img src={app_logo} className={styles.applogo} />
                 {/* <span className={styles.logoText}>Graphy</span> */}
               </div>
             </Link>

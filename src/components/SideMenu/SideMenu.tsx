@@ -25,12 +25,12 @@ const SideMenu: React.FC<SideMenuProps> = ({
 }) => {
   const menuItems = [
     { icon: <FiHome />, label: "Home", path: "/" },
-    { icon: <FiUser />, label: "Shop", path: "/profile" },
-    { icon: <AiFillProduct />, label: "Products", path: "/history" },
-    { icon: <FiInfo />, label: "About", path: "/author" },
-    { icon: <FiPhone />, label: "Contact", path: "/notifications" },
-    { icon: <FiHelpCircle />, label: "Help", path: "/help" },
-    { icon: <FiSettings />, label: "Setting", path: "/settings" },
+    { icon: <FiUser />, label: "Shop", path: "/" },
+    { icon: <AiFillProduct />, label: "Products", path: "/" },
+    { icon: <FiInfo />, label: "About", path: "/" },
+    { icon: <FiPhone />, label: "Contact", path: "/" },
+    { icon: <FiHelpCircle />, label: "Help", path: "/" },
+    { icon: <FiSettings />, label: "Setting", path: "/" },
   ];
 
   return (

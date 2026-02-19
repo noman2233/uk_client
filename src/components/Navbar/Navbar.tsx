@@ -3,6 +3,7 @@ import styles from "./Navbar.module.css";
 import { FiSearch, FiShoppingCart, FiMenu } from "react-icons/fi"; // Install react-icons
 import { Link } from "react-router-dom";
 import SideMenu from "../SideMenu/SideMenu";
+import { app_logo } from "../../data";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -10,15 +11,12 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
-        {/* Logo Section */}
+ 
         <div className={styles.logoContainer}>
-          {/* <h1 className={styles.logoText}>NI DRIP CENTRAL</h1>
-          <span className={styles.logoSubtext}>FURNITURE</span> */}
-          <img
-            src="https://img.freepik.com/free-vector/minimalist-furniture-logo-design_23-2148461951.jpg"
-            alt=""
-            className={styles.logo}
-          />
+        
+          <Link to="/">
+            <img src={app_logo} alt="" className={styles.logo} />
+          </Link>
         </div>
 
         {/* Desktop Navigation Links */}
@@ -43,8 +41,6 @@ const Navbar: React.FC = () => {
               Contact
             </Link>
           </li>
-
-    
         </ul>
 
         {/* Right Side Actions */}
@@ -68,7 +64,9 @@ const Navbar: React.FC = () => {
           >
             {isMenuOpen ? <FiMenu /> : <FiMenu />}
           </button>
-          {isMenuOpen && <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
+          {isMenuOpen && (
+            <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+          )}
         </div>
       </div>
     </nav>
