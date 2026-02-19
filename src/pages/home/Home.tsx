@@ -1,4 +1,3 @@
-import React from "react";
 import ResetPassword from "../auth/ResetPasswordPage/ResetPassword";
 
 const Home = () => {
