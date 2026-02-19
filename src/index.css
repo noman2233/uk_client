@@ -1,0 +1,21 @@
+:root {
+  /* Colors */
+  --color-bg-main: #f5f1ee; /* Soft beige background */
+  --color-primary-dark: #000000; /* Dark brown from the header/footer */
+  --color-white: #ffffff;
+  --color-text-muted: #666666;
+  --color-border: #dcdcdc;
+  --color-error: #d93025;
+
+  /* Button / Textures */
+  --gradient-wood: linear-gradient(to right, #8b6b4d, #b08d6a); /* Wood texture approximation */
+  
+  /* Layout */
+  --border-radius-lg: 24px;
+  --border-radius-md: 12px;
+  --max-width-card: 550px;
+  
+  /* Fonts */
+  --font-family-serif: 'Poppins', serif; /* Matching the elegant title */
+  --font-family-sans: 'Inter', sans-serif;
+}
