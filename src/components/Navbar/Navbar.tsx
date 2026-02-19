@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import { FiSearch, FiShoppingCart, FiMenu, FiX } from "react-icons/fi"; // Install react-icons
+import { FiSearch, FiShoppingCart, FiMenu } from "react-icons/fi"; // Install react-icons
 import { Link } from "react-router-dom";
 import SideMenu from "../SideMenu/SideMenu";
 
 const Navbar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
     <nav className={styles.navbar}>
@@ -44,10 +44,7 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
 
-          {/* Mobile Only Actions */}
-          <li className={styles.mobileOnly}>
-            <button className={styles.signInBtnMobile}>Sign In</button>
-          </li>
+    
         </ul>
 
         {/* Right Side Actions */}
@@ -69,7 +66,7 @@ const Navbar: React.FC = () => {
             className={styles.hamburger}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <FiX /> : <FiMenu />}
+            {isMenuOpen ? <FiMenu /> : <FiMenu />}
           </button>
           {isMenuOpen && <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
         </div>

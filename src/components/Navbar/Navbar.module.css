@@ -191,8 +191,23 @@
 
 @media (max-width: 950px) {
   .logo {
-    width: 250px;
-    height: 80px;
+    width: 130px;
+    height: 65px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo {
+    width: 100px;
+    height: 55px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 450px) {
+  .logo {
+    width: 70px;
+    height: 45px;
     object-fit: cover;
   }
 }

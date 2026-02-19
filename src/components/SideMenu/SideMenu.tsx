@@ -14,10 +14,9 @@ import { AiFillProduct } from "react-icons/ai";
 
 interface SideMenuProps {
   isMenuOpen: boolean;
-  setIsMenuOpen: () => void;
+  setIsMenuOpen: (open: boolean) => void;
   userName?: string;
 }
-
 const SideMenu: React.FC<SideMenuProps> = ({
   isMenuOpen,
   setIsMenuOpen,
@@ -38,7 +37,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
       {/* Overlay */}
       <div
         className={`${styles.overlay} ${isMenuOpen ? styles.show : ""}`}
-        onClick={isMenuOpen}
+        onClick={() => setIsMenuOpen(false)}
       />
 
       <aside className={`${styles.sideMenu} ${isMenuOpen ? styles.open : ""}`}>
@@ -62,7 +61,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
             onClick={() => setIsMenuOpen(false)}
             aria-label="Close menu"
           >
-            <FiX className={styles.icon}/>
+            <FiX className={styles.icon} />
           </button>
         </div>
 
@@ -73,7 +72,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
               key={item.label}
               to={item.path}
               className={styles.navItem}
-              onClick={setIsMenuOpen}
+              onClick={() => setIsMenuOpen(false)}
             >
               <span className={styles.icon}>{item.icon}</span>
               <span className={styles.label}>{item.label}</span>
