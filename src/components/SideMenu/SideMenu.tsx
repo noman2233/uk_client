@@ -10,7 +10,7 @@ import {
   FiPhone,
   FiInfo,
 } from "react-icons/fi";
-import styles from "./SideMenu.module.css";
+import styles from "./newsidemenu.module.css";
 import { AiFillProduct } from "react-icons/ai";
 
 interface SideMenuProps {
