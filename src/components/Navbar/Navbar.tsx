@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { FiSearch, FiShoppingCart, FiMenu, FiX } from "react-icons/fi"; // Install react-icons
 import { Link } from "react-router-dom";
+import SideMenu from "../SideMenu/SideMenu";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Navbar: React.FC = () => {
           {/* <h1 className={styles.logoText}>NI DRIP CENTRAL</h1>
           <span className={styles.logoSubtext}>FURNITURE</span> */}
           <img
-            src="https://nidripcentralelectronics.co.uk/wp-content/uploads/2025/08/887693ED-AB70-4CCC-9BA4-EC73CEA3F8C6-1-2048x686.png"
+            src="https://img.freepik.com/free-vector/minimalist-furniture-logo-design_23-2148461951.jpg"
             alt=""
             className={styles.logo}
           />
@@ -70,6 +71,7 @@ const Navbar: React.FC = () => {
           >
             {isMenuOpen ? <FiX /> : <FiMenu />}
           </button>
+          {isMenuOpen && <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
         </div>
       </div>
     </nav>
