@@ -3,8 +3,6 @@ import { Link } from "react-router-dom"; // Import Link
 import {
   FaXTwitter,
   FaInstagram,
-  FaLinkedin,
-  FaGithub,
   FaLocationPin,
   FaMailchimp,
   FaPhone,
