@@ -3,10 +3,10 @@ import { Formik, Form } from 'formik';
 import styles from './ResetPassword.module.css';
 import * as Yup from 'yup';
 
-interface FormValues {
-  password: "";
-  confirmPassword: "";
-}
+// interface FormValues {
+//   password: "";
+//   confirmPassword: "";
+// }
 
 const ResetPasswordSchema = Yup.object().shape({
   password: Yup.string()
