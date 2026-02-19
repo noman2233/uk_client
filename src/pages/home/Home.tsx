@@ -1,11 +1,7 @@
 import ResetPassword from "../auth/ResetPasswordPage/ResetPassword";
 
 const Home = () => {
-  return (
-    <div>
-      <ResetPassword />
-    </div>
-  );
+  return <ResetPassword />;
 };
 
 export default Home;

@@ -188,3 +188,11 @@
     display: none;
   }
 }
+
+@media (max-width: 950px) {
+  .logo {
+    width: 250px;
+    height: 80px;
+    object-fit: cover;
+  }
+}
