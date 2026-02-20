@@ -123,7 +123,7 @@ const Gallary = React.forwardRef<HTMLDivElement, any>((_props, ref) => {
         },
       },
       {
-        breakpoint: 650,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 2,

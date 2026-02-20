@@ -31,10 +31,6 @@ export const Gallry_DummyData = [
     id: 6,
     img: "https://ergocraft.vamtam.com/wp-content/uploads/2024/06/pexels-ecrin-11563556.jpg",
   },
-  {
-    id: 6,
-    img: "",
-  },
 ];
 
 export const blogData = [
@@ -44,7 +40,8 @@ export const blogData = [
     month: "Oct",
     author: "Preyan Technosys",
     title: "Modern house trends for future lifestyles and i...",
-    image: "https://zubio-preyantechnosys.myshopify.com/cdn/shop/articles/blog-02.webp?v=1696242727",
+    image:
+      "https://zubio-preyantechnosys.myshopify.com/cdn/shop/articles/blog-02.webp?v=1696242727",
   },
   {
     id: 2,
@@ -52,7 +49,8 @@ export const blogData = [
     month: "Oct",
     author: "Preyan Technosys",
     title: "Modern house trends for future lifestyles and i...",
-    image: "https://zubio-preyantechnosys.myshopify.com/cdn/shop/articles/blog-1.webp?v=1696242631",
+    image:
+      "https://zubio-preyantechnosys.myshopify.com/cdn/shop/articles/blog-1.webp?v=1696242631",
   },
   {
     id: 3,
@@ -60,6 +58,7 @@ export const blogData = [
     month: "Oct",
     author: "Preyan Technosys",
     title: "Innovative idea for home decor and office decor",
-    image: "https://zubio-preyantechnosys.myshopify.com/cdn/shop/articles/blog01_622.webp?v=1696242700",
+    image:
+      "https://zubio-preyantechnosys.myshopify.com/cdn/shop/articles/blog01_622.webp?v=1696242700",
   },
 ];
