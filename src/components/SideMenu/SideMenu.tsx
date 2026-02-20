@@ -12,6 +12,7 @@ import {
 } from "react-icons/fi";
 import styles from "./newsidemenu.module.css";
 import { AiFillProduct } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 interface SideMenuProps {
   isMenuOpen: boolean;
@@ -41,7 +42,10 @@ const SideMenu: React.FC<SideMenuProps> = ({
         onClick={() => setIsMenuOpen(false)}
       />
 
-      <aside className={`${styles.sideMenu} ${isMenuOpen ? styles.open : ""}`}>
+      <motion.div className={`${styles.sideMenu} ${isMenuOpen ? styles.open : ""}`}  
+      
+      
+      >
         {/* Header */}
         <div className={styles.header}>
           <div className={styles.userInfo}>
@@ -91,7 +95,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
             <span>Logout</span>
           </button>
         </div>
-      </aside>
+      </motion.div>
     </>
   );
 };

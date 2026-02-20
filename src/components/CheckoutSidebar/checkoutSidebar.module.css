@@ -1,0 +1,147 @@
+.checkout_sidebar {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 999;
+  padding-top: 30px 0px;
+}
+
+.checkout_sidebar h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.clossCartIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  outline: none;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* cursor: pointer; */
+
+}
+.crossIcon{
+color: white;
+font-size: 20px;
+}
+.clossCartIcon {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.cart-item-details p {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+}
+.cart_num {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0px 5px;
+}
+
+.cart-item-controls button {
+  background: #ddd;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.summary {
+  margin-top: 20px;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.checkout_btn {
+  width: 100%;
+  padding: 13px;
+  background: var(--gradient-wood);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 30px;
+  border: none;
+  font-weight: 500;
+}
+
+.summary_total {
+  font-weight: 400;
+  font-size: 14px;
+}
+.summary_price {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .checkout_sidebar {
+    width: 100vw;
+    height: auto;
+  }
+}
+@media (max-width: 410px) {
+  .checkout_sidebar {
+    width: 330px;
+  }
+}
+
+@media (max-width: 360px) {
+  .checkout_sidebar {
+    width: 300px;
+  }
+}
+
+@media (max-width: 300px) {
+  .checkout_sidebar {
+    width: 280px;
+  }
+}

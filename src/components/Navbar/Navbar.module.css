@@ -6,7 +6,7 @@
   padding: 20px 50px 0px 5%;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 998;
   color: var(--nav-text);
   font-family: var(--font-main);
   position: sticky;

@@ -4,10 +4,11 @@ import { FiSearch, FiShoppingCart, FiMenu } from "react-icons/fi"; // Install re
 import { Link } from "react-router-dom";
 import SideMenu from "../SideMenu/SideMenu";
 import { app_logo } from "../../utils/data";
+import CheckoutSidebar from "../CheckoutSidebar/CheckoutSidebar";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
+  const [openCheckout, setOpenCheckout] = useState(false);
   return (
     <>
       <nav className={styles.navbar}>
@@ -61,7 +62,11 @@ const Navbar: React.FC = () => {
               <button className={styles.iconBtn} aria-label="Search">
                 <FiSearch />
               </button>
-              <button className={styles.iconBtn} aria-label="Cart">
+              <button
+                className={styles.iconBtn}
+                aria-label="Cart"
+                onClick={() => setOpenCheckout(true)}
+              >
                 <FiShoppingCart />
                 <span className={styles.cartBadge}>1</span>
               </button>
@@ -82,6 +87,12 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
       <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      {openCheckout && (
+        <CheckoutSidebar
+          openCheckout={openCheckout}
+          setOpenCheckout={setOpenCheckout}
+        />
+      )}
     </>
   );
 };
