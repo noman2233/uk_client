@@ -42,20 +42,20 @@
 }
 
 .highlight {
-  color: #ffcc00; /* Gold/Yellow highlight for the percentage */
+  color: var(--color-bg-secondary); /* Gold/Yellow highlight for the percentage */
   font-weight: 700;
   margin: 0 4px;
 }
 
 .shopLink {
-  color: #ffffff;
+  color: white;
   text-decoration: underline;
   margin-left: 8px;
   font-weight: 600;
 }
 
 .rightSection a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   transition: opacity 0.2s;
 }
@@ -94,7 +94,7 @@
   }
   .promoSection {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 4px;
   }
 }

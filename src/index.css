@@ -1,6 +1,7 @@
 :root {
   /* Colors */
-  --color-bg-main: #f5f1ee; /* Soft beige background */
+  --color-bg-main: #fd5201; /* Soft beige background */
+  --color-bg-secondary: #fb8a02; /* Soft beige background */
   --color-primary-dark: #000000; /* Dark brown from the header/footer */
   --color-white: #ffffff;
   --color-text-muted: #666666;
