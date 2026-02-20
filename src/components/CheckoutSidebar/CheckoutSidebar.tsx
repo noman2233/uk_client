@@ -1,7 +1,7 @@
 import styles from "./checkoutSidebar.module.css"; // Ensure you renamed your .css to .module.css
 import { motion } from "framer-motion";
 import { FaMinus, FaPlus } from "react-icons/fa6";
-import { IoCloseOutline, IoPulse } from "react-icons/io5";
+import { IoCloseOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 interface CheckoutSidebarProps {
