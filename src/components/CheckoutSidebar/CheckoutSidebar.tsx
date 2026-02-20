@@ -1,8 +1,8 @@
 import styles from "./checkoutSidebar.module.css"; // Ensure you renamed your .css to .module.css
 import { motion } from "framer-motion";
- import { IoCloseOutline } from "react-icons/io5";
+import { FaMinus, FaPlus } from "react-icons/fa6";
+import { IoCloseOutline, IoPulse } from "react-icons/io5";
 import { Link } from "react-router-dom";
-
 
 interface CheckoutSidebarProps {
   openCheckout: boolean;
@@ -10,7 +10,10 @@ interface CheckoutSidebarProps {
   userName?: string;
 }
 
-const CheckoutSidebar: React.FC<CheckoutSidebarProps> = ({ setOpenCheckout, openCheckout }) => {
+const CheckoutSidebar: React.FC<CheckoutSidebarProps> = ({
+  setOpenCheckout,
+  openCheckout,
+}) => {
   return (
     <motion.div
       initial={{ x: "100%", opacity: 0 }}
@@ -24,36 +27,44 @@ const CheckoutSidebar: React.FC<CheckoutSidebarProps> = ({ setOpenCheckout, open
     >
       <h2 className={styles.checkout_heading}>Checkout Details</h2>
 
-      <div className={styles["cart-item"]}>
+      <div className={styles.cart_item}>
         <img
           src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-madebymath-90946.jpg&fm=jpg"
           alt="Vegan Protein"
           className={styles.checkout_sidebar_image}
         />
-        <div className={styles["cart-item-details"]}>
+        <div className={styles.cart_item_details}>
           <p>Natural Vegan Protein</p>
           <p>€17,95</p>
         </div>
-        <div className={styles["cart-item-controls"]}>
-          <button>-</button>
+        <div className={styles.cart_item_controls}>
+          <button>
+            <FaPlus />
+          </button>
           <span className={styles.cart_num}>1</span>
-          <button>+</button>
+          <button>
+            <FaMinus />
+          </button>
         </div>
       </div>
 
-      <div className={styles["cart-item"]}>
+      <div className={styles.cart_item}>
         <img
           src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-madebymath-90946.jpg&fm=jpg"
           alt="Vegan Shake"
         />
-        <div className={styles["cart-item-details"]}>
+        <div className={styles.cart_item_details}>
           <p>Natural Maaltijdshake</p>
           <p>€14,35</p>
         </div>
-        <div className={styles["cart-item-controls"]}>
-          <button>-</button>
+        <div className={styles.cart_item_controls}>
+          <button>
+            <FaPlus />
+          </button>
           <span className={styles.cart_num}>1</span>
-          <button>+</button>
+          <button>
+            <FaMinus />
+          </button>
         </div>
       </div>
 
@@ -76,7 +87,7 @@ const CheckoutSidebar: React.FC<CheckoutSidebarProps> = ({ setOpenCheckout, open
         className={styles.clossCartIcon}
         onClick={() => setOpenCheckout(false)}
       >
-            <IoCloseOutline className={styles.crossIcon}/>
+        <IoCloseOutline className={styles.crossIcon} />
       </button>
 
       <Link to="/checkout" style={{ textDecoration: "none" }}>
