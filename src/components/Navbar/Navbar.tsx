@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
             className={styles.hamburger}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <FiMenu /> : <FiMenu />}
+            {isMenuOpen ? <FiMenu className={styles.hamburgerIcon} /> : <FiMenu className={styles.hamburgerIcon}/>}
           </button>
           {isMenuOpen && (
             <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />

@@ -7,7 +7,7 @@
   background: #ffffff;
   z-index: 1001;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+transition: transform 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.05);
@@ -179,6 +179,8 @@
 /* Small Device Adjustments */
 @media (max-width: 480px) {
   .sideMenu {
-    width: 100%;
+    width: 90%;
   }
 }
+
+
