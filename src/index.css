@@ -8,7 +8,7 @@
   --color-error: #d93025;
 
   /* Button / Textures */
-  --gradient-wood: linear-gradient(to right, #8b6b4d, #b08d6a); /* Wood texture approximation */
+  --gradient-wood: linear-gradient(to right, #fb8a02, #fd5201); /* Wood texture approximation */
   
   /* Layout */
   --border-radius-lg: 24px;
@@ -16,6 +16,6 @@
   --max-width-card: 550px;
   
   /* Fonts */
-  --font-family-serif: 'Poppins', serif; /* Matching the elegant title */
-  --font-family-sans: 'Quicksand', sans-serif;
+  --font-family-serif: 'Jost', serif; /* Matching the elegant title */
+  --font-family-sans: 'Jost', sans-serif;
 }

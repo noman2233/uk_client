@@ -1,0 +1,113 @@
+.hero {
+  width: 100%;
+  padding: 20px 5%;
+  background-color: #fff;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr; /* Asymmetrical split */
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mainCard, .sideCard {
+  background-color: #ededed; /* Match the soft gray in your image */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.mainCard {
+  height: 650px;
+}
+
+.sideColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sideCard {
+  flex: 1; /* Splits the right side height evenly */
+}
+
+.heroImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mainCard:hover .heroImage, 
+.sideCard:hover .heroImage {
+  transform: scale(1.08);
+}
+
+/* Label & Typography */
+.labelGroup {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.labelGroup h2, .labelGroup h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+  color: #1a1a1a;
+  font-family: 'Jost', sans-serif;
+}
+
+.shopBtn {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.shopBtn span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #1a1a1a;
+  margin-top: 4px;
+  transition: width 0.3s ease;
+}
+
+.shopBtn:hover span {
+  width: 100%;
+}
+
+/* --- Responsive Breakpoints --- */
+
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr 1fr; /* Equal split for tablets */
+  }
+  .mainCard {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroGrid {
+    grid-template-columns: 1fr; /* Stack vertically for phones */
+  }
+  .mainCard {
+    height: 400px;
+  }
+  .sideCard {
+    height: 300px;
+  }
+  .labelGroup {
+    bottom: 20px;
+    left: 20px;
+  }
+}

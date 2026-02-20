@@ -1,0 +1,18 @@
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mainTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 100px;
+  height: 3px;
+  background-color: #df5600;
+  margin: 0 auto;
+}

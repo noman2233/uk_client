@@ -1,7 +1,9 @@
 .footer {
-  background-color: var(
-    --color-primary-dark
-  ); /* Matches the clean white of the Graphy image */
+  background-color: rgb(
+    244,
+    244,
+    244
+  ); /* Matches the clean black of the Graphy image */
   padding: 80px 5% 40px 5%;
   border-top: 1px solid #f0f0f0;
   font-family: "Inter", sans-serif;
@@ -33,7 +35,6 @@
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 20px;
-  
 }
 .link,
 .logoLink {
@@ -45,12 +46,12 @@
   font-size: 0.9rem;
   font-family: var(--font-family-serif);
   padding-top: 10px;
-  color: white;
+  color: black;
 }
 
 .logoIcon {
   background: #1a1a1a;
-  color: white;
+  color: black;
   width: 32px;
   height: 32px;
   display: flex;
@@ -74,7 +75,7 @@
   margin: 15px 0px;
 }
 .footerContact p {
-  color: white;
+  color: black;
   font-family: var(--font-family-serif);
 }
 
@@ -104,7 +105,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: white;
+  color: black;
 }
 
 .linkGroup ul {
@@ -119,32 +120,32 @@
 
 .applogo {
   width: 150px;
-  height: 100px;
+  height: 80px;
   object-fit: cover;
 }
 .iconFooter {
-  color: white;
+  color: black;
 }
 
 .linkGroup a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 0.9rem;
   transition: color 0.2s;
 }
 
 .linkGroup a:hover {
-  color: #bcbcbc;
+  color: grey;
 }
 
 /* Bottom Section */
 .bottomSection {
   padding-top: 30px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid #868484;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #999;
+  color: ;
   font-size: 0.85rem;
 }
 
@@ -155,7 +156,7 @@
 
 .legalLinks a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .legalLinks a:hover {
@@ -174,8 +175,7 @@
 
   .brandColumn {
     flex: 0 1 239px;
-}
-
+  }
 }
 
 @media (max-width: 768px) {
@@ -193,7 +193,6 @@
     gap: 20px;
     align-items: flex-start;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -205,5 +204,4 @@
     flex-direction: column;
     gap: 12px;
   }
- 
 }

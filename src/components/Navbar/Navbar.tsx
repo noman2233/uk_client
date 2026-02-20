@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 import { FiSearch, FiShoppingCart, FiMenu } from "react-icons/fi"; // Install react-icons
 import { Link } from "react-router-dom";
 import SideMenu from "../SideMenu/SideMenu";
-import { app_logo } from "../../data";
+import { app_logo } from "../../utils/data";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -11,9 +11,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
- 
         <div className={styles.logoContainer}>
-        
           <Link to="/">
             <img src={app_logo} alt="" className={styles.logo} />
           </Link>
@@ -32,10 +30,20 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           <li>
+            <Link to="collections" className={styles.link}>
+              Collections
+            </Link>
+          </li>{" "}
+          <li>
+            <Link to="/blog" className={styles.link}>
+              Blog
+            </Link>
+          </li>
+          <li>
             <Link to="/about" className={styles.link}>
               About
             </Link>
-          </li>
+          </li>{" "}
           <li>
             <Link to="/contact" className={styles.link}>
               Contact

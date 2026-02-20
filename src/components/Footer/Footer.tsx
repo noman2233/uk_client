@@ -8,7 +8,7 @@ import {
   FaPhone,
 } from "react-icons/fa6";
 import styles from "./Footer.module.css";
-import { app_logo } from "../../data";
+import { app_logo } from "../../utils/data";
 
 const Footer: React.FC = () => {
   return (
@@ -34,9 +34,9 @@ const Footer: React.FC = () => {
               </a>
             </div>
             <p className={styles.companyInfo}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              sapiente, voluptas corrupti voluptates quasi expedita! Soluta id
-              assumenda nihil dicta.
+              Our furniture shop blends timeless craftsmanship with modern
+              design to transform your living spaces into personalized
+              sanctuaries of comfort and style.
             </p>
           </div>
 
@@ -45,13 +45,16 @@ const Footer: React.FC = () => {
               <h4>Product</h4>
               <ul>
                 <li>
-                  <Link to="/features">Features</Link>
+                  <Link to="/features">Products</Link>
                 </li>
                 <li>
-                  <Link to="/pricing">Pricing</Link>
+                  <Link to="/pricing">Categories</Link>
                 </li>
                 <li>
-                  <Link to="/integrations">Integrations</Link>
+                  <Link to="/integrations">Featured Product</Link>
+                </li>{" "}
+                <li>
+                  <Link to="/integrations">Our Team </Link>
                 </li>
               </ul>
             </div>
@@ -62,13 +65,13 @@ const Footer: React.FC = () => {
                   <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Help</Link>
+                  <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Terms & Conditions</Link>
+                  <Link to="/contact">Return Policy</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Privacy Policy</Link>
+                  <Link to="/contact">Shipping</Link>
                 </li>
               </ul>
             </div>
@@ -95,8 +98,8 @@ const Footer: React.FC = () => {
         <div className={styles.bottomSection}>
           <p>© 2026 Graphy. All rights reserved.</p>
           <div className={styles.legalLinks}>
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/terms">Terms of Service</Link>
+            <Link to="/">Privacy Policy</Link>
+            <Link to="/">Terms of Service</Link>
           </div>
         </div>
       </div>

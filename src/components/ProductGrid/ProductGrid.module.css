@@ -1,0 +1,165 @@
+
+
+.container {
+  width: 100%;
+  padding: 60px 5%;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex; /* Center the grid wrapper */
+  justify-content: center;
+}
+
+.grid {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow items to wrap to next line */
+  gap: 20px; /* Consistent spacing between cards */
+  justify-content: flex-start; /* Align cards to the start of the row */
+}
+
+.productCard {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+
+  /* LAPTOP: 4 columns calculation */
+  /* (100% / 4) - (total gap space shared between items) */
+  flex: 0 1 calc(25% - 15px);
+  box-sizing: border-box;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Image Switching Logic */
+.primaryImg,
+.hoverImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hoverImg {
+  opacity: 0;
+}
+
+.productCard:hover .primaryImg {
+  opacity: 0;
+}
+
+.productCard:hover .hoverImg {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Add to Cart Button Animation */
+.addToCartBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: var(--gradient-wood); /* Replaced variable for stability */
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.productCard:hover .addToCartBtn {
+  transform: translateY(0);
+}
+
+/* Product Details */
+.productInfo {
+  padding: 15px 5px;
+  text-align: left;
+}
+
+.productName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.category {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #004d43;
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* TABLET: 3 columns */
+@media (max-width: 1100px) {
+  .productCard {
+    /* (100% / 3) minus gap allowance */
+    flex: 0 1 calc(33.333% - 14px);
+  }
+}
+
+/* MOBILE: 2 columns */
+@media (max-width: 768px) {
+  .grid {
+    gap: 15px; /* Tighter gap for mobile */
+  }
+
+  .productCard {
+    /* (100% / 2) minus gap allowance */
+    flex: 0 1 calc(50% - 8px);
+  }
+
+  .productName {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  /* Show button by default on mobile (no hover state) */
+  .addToCartBtn {
+    transform: translateY(0);
+    padding: 10px 0;
+    font-size: 0.7rem;
+  }
+}
+
+/* SMALL PHONES: Stack if very narrow, or keep 2 col */
+@media (max-width: 400px) {
+  .productCard {
+    /* Keeps 2 columns but smaller padding */
+    padding: 0;
+  }
+}

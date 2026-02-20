@@ -1,0 +1,100 @@
+.announcementBar {
+  width: 100%;
+  background-color: #0a0a0a; /* Dark background as seen in image */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSection, .rightSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  font-size: 14px;
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.promoSection {
+  font-weight: 600;
+}
+
+.highlight {
+  color: #ffcc00; /* Gold/Yellow highlight for the percentage */
+  font-weight: 700;
+  margin: 0 4px;
+}
+
+.shopLink {
+  color: #ffffff;
+  text-decoration: underline;
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+.rightSection a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.rightSection a:hover {
+  opacity: 0.7;
+}
+
+/* --- RESPONSIVE LOGIC --- */
+
+/* Tablets: Hide the Right Section links to maintain space */
+@media (max-width: 1100px) {
+  .rightSection {
+    display: none;
+  }
+}
+
+/* Large Mobile: Hide Left Section, Center the main Promo */
+@media (max-width: 768px) {
+  .container {
+    justify-content: center;
+  }
+  .leftSection {
+    display: none;
+  }
+  .promoSection {
+    text-align: center;
+    font-size: 11px;
+  }
+}
+
+/* Small Phones: Tighten padding */
+@media (max-width: 480px) {
+  .announcementBar {
+    padding: 8px 0;
+  }
+  .promoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
