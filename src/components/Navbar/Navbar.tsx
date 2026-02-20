@@ -9,80 +9,80 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.navContainer}>
-        <div className={styles.logoContainer}>
-          <Link to="/">
-            <img src={app_logo} alt="" className={styles.logo} />
-          </Link>
-        </div>
-
-        {/* Desktop Navigation Links */}
-        {/* <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}> */}
-        <ul className={`${styles.navLinks}`}>
-          <li>
-            <Link to="/" className={styles.link}>
-              Home
+    <>
+      <nav className={styles.navbar}>
+        <div className={styles.navContainer}>
+          <div className={styles.logoContainer}>
+            <Link to="/">
+              <img src={app_logo} alt="" className={styles.logo} />
             </Link>
-          </li>
-          <li>
-            <Link to="/products" className={styles.link}>
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link to="collections" className={styles.link}>
-              Collections
-            </Link>
-          </li>{" "}
-          <li>
-            <Link to="/blog" className={styles.link}>
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className={styles.link}>
-              About
-            </Link>
-          </li>{" "}
-          <li>
-            <Link to="/contact" className={styles.link}>
-              Contact
-            </Link>
-          </li>
-        </ul>
-
-        {/* Right Side Actions */}
-        <div className={styles.actions}>
-          <button className={styles.signInBtn}>Sign In</button>
-
-          <div className={styles.iconGroup}>
-            <button className={styles.iconBtn} aria-label="Search">
-              <FiSearch />
-            </button>
-            <button className={styles.iconBtn} aria-label="Cart">
-              <FiShoppingCart />
-              <span className={styles.cartBadge}>1</span>
-            </button>
           </div>
 
-          {/* Hamburger Menu */}
-          <button
-            className={styles.hamburger}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <FiMenu className={styles.hamburgerIcon} />
-            ) : (
-              <FiMenu className={styles.hamburgerIcon} />
-            )}
-          </button>
-          {isMenuOpen && (
-            <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-          )}
+          {/* Desktop Navigation Links */}
+          {/* <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}> */}
+          <ul className={`${styles.navLinks}`}>
+            <li>
+              <Link to="/" className={styles.link}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/products" className={styles.link}>
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link to="collections" className={styles.link}>
+                Collections
+              </Link>
+            </li>{" "}
+            <li>
+              <Link to="/blog" className={styles.link}>
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className={styles.link}>
+                About
+              </Link>
+            </li>{" "}
+            <li>
+              <Link to="/contact" className={styles.link}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+
+          {/* Right Side Actions */}
+          <div className={styles.actions}>
+            <button className={styles.signInBtn}>Sign In</button>
+
+            <div className={styles.iconGroup}>
+              <button className={styles.iconBtn} aria-label="Search">
+                <FiSearch />
+              </button>
+              <button className={styles.iconBtn} aria-label="Cart">
+                <FiShoppingCart />
+                <span className={styles.cartBadge}>1</span>
+              </button>
+            </div>
+
+            {/* Hamburger Menu */}
+            <button
+              className={styles.hamburger}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? (
+                <FiMenu className={styles.hamburgerIcon} />
+              ) : (
+                <FiMenu className={styles.hamburgerIcon} />
+              )}
+            </button>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+    </>
   );
 };
 

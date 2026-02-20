@@ -2,12 +2,19 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 280px;
   height: 100vh;
   background: #ffffff;
   z-index: 1001;
+
+  /* Start it off-screen */
   transform: translateX(-100%);
-  transition: transform 1s ease-in-out;
+
+  /* This ensures it doesn't "flash" on load */
+  visibility: hidden;
+
+  transition: transform 01s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s;
+
   display: flex;
   flex-direction: column;
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.05);
@@ -15,6 +22,7 @@
 
 .open {
   transform: translateX(0);
+  visibility: visible; /* Make it visible only when opening */
 }
 
 .overlay {
@@ -23,13 +31,15 @@
   background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transition: opacity 0.4s ease, visibility 0.4s;
   z-index: 1000;
+  pointer-events: none;
 }
 
 .show {
   opacity: 1;
   visibility: visible;
+  pointer-events: all;
 }
 
 /* Header Section */
