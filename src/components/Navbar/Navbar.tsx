@@ -18,7 +18,8 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
+        {/* <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}> */}
+        <ul className={`${styles.navLinks}`}>
           <li>
             <Link to="/" className={styles.link}>
               Home
@@ -70,7 +71,11 @@ const Navbar: React.FC = () => {
             className={styles.hamburger}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <FiMenu className={styles.hamburgerIcon} /> : <FiMenu className={styles.hamburgerIcon}/>}
+            {isMenuOpen ? (
+              <FiMenu className={styles.hamburgerIcon} />
+            ) : (
+              <FiMenu className={styles.hamburgerIcon} />
+            )}
           </button>
           {isMenuOpen && (
             <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
