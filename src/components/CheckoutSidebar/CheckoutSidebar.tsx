@@ -3,7 +3,14 @@ import { motion } from "framer-motion";
  import { IoCloseOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-const CheckoutSidebar = ({ setOpenCheckout, openCheckout }) => {
+
+interface CheckoutSidebarProps {
+  openCheckout: boolean;
+  setOpenCheckout: (open: boolean) => void;
+  userName?: string;
+}
+
+const CheckoutSidebar: React.FC<CheckoutSidebarProps> = ({ setOpenCheckout, openCheckout }) => {
   return (
     <motion.div
       initial={{ x: "100%", opacity: 0 }}

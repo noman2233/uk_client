@@ -8,7 +8,7 @@ import CheckoutSidebar from "../CheckoutSidebar/CheckoutSidebar";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [openCheckout, setOpenCheckout] = useState(false);
+  const [openCheckout, setOpenCheckout] = useState<boolean>(false);
   return (
     <>
       <nav className={styles.navbar}>
