@@ -3,7 +3,7 @@ import styles from "./Heading.module.css";
 
 // Define the shape of the props
 interface HeadingProps {
-  title: string;
+  title?: string;
 }
 
 const Heading: React.FC<HeadingProps> = ({ title }) => {
