@@ -76,7 +76,6 @@
 
 // export default Gallary;
 
-
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -100,7 +99,7 @@ const Gallary = React.forwardRef<HTMLDivElement, any>((_props, ref) => {
     dots: false,
     infinite: true,
     autoplay: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: 4,
     slidesToScroll: 2,
     initialSlide: 0,
@@ -108,7 +107,7 @@ const Gallary = React.forwardRef<HTMLDivElement, any>((_props, ref) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 2,
           infinite: true,
           dots: true,
@@ -117,9 +116,18 @@ const Gallary = React.forwardRef<HTMLDivElement, any>((_props, ref) => {
       {
         breakpoint: 760,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          infinite: true,
         },
       },
     ],
