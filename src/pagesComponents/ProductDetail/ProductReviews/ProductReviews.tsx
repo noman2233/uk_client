@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import styles from "./productReviews.module.css";
-import OverAllReview from "../productOverallReview/OverAllReview";
+import OverAllReview from "../ProductOverallReview/OverAllReview";
 import WriteReview from "../../../pages/writeReview/WriteReview";
 import ReviewCard from "./ReviewCard";
 
-interface ProductReviewsProps {
-  toggleState: number;
-}
+// interface ProductReviewsProps {
+//   toggleState: number;
+// }
 
-const ProductReviews: React.FC<ProductReviewsProps> = ({ toggleState }) => {
+// const ProductReviews: React.FC<ProductReviewsProps> = ({ toggleState }) => {
+const ProductReviews: React.FC  = () => {
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
 
   const openModal = (): void => {

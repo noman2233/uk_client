@@ -10,6 +10,7 @@ import {
 import styles from "./productDetail.module.css";
 import Description from "../../pagesComponents/ProductDetail/Description/Description";
 import ProductReviews from "../../pagesComponents/ProductDetail/ProductReviews/ProductReviews";
+import ReturnPolicyCard from "../../pagesComponents/ProductDetail/ReturnPolicy/ReturnPolicyCard";
 
 const images = [
   "https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg", // Main Lamp
@@ -197,11 +198,8 @@ const ProductDeatil: React.FC = () => {
 
       {toggleTabs == 1 ? <Description /> : <div></div>}
 
-      {toggleTabs == 2 ? (
-        <ProductReviews   />
-      ) : (
-        <div></div>
-      )}
+      {toggleTabs == 2 ? <ProductReviews /> : <div></div>}
+      {toggleTabs == 3 ? <ReturnPolicyCard /> : <div></div>}
     </div>
   );
 };

@@ -1,0 +1,75 @@
+.card_container {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.content_box {
+  width: 100%;
+  max-width: 1200px; /* Matches the container width of your other sections */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.policy_text {
+  font-family: 'Jost', sans-serif; /* Matches your other components */
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.policy_text:last-child {
+  margin-bottom: 0;
+}
+
+.link {
+  color: #050508; /* Blue color from the image */
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+  padding: 0px 10px;
+}
+
+.link:hover {
+  border-bottom: 1px solid #0000ff;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .policy_text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .card_container {
+    padding: 15px 0;
+  }
+  
+  .policy_text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+}
+
+/* Small Phone Screens */
+@media (max-width: 480px) {
+  .content_box {
+    padding: 0 15px;
+  }
+  
+  .policy_text {
+    font-size: 13px;
+    text-align: justify; /* Helps maintain the block look on very narrow screens */
+  }
+}
