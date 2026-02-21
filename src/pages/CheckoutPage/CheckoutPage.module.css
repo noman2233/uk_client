@@ -1,0 +1,181 @@
+.pageWrapper {
+  background-color: #e4e4e4;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  
+}
+.heading{
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Jost';
+  padding-bottom: 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Desktop Side-by-Side */
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  margin: 60px 0px;
+}
+.sectionHeading {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Jost";
+  padding-bottom: 10px;
+}
+.formColumn {
+  padding: 40px;
+  border-right: 1px solid #e1e1e1;
+}
+
+.summaryColumn {
+  padding: 40px;
+  background-color: #fafafa;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.cardBox {
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.payBtn {
+  width: 100%;
+  background: var(--gradient-wood);
+  color: white;
+  padding: 14px 80px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.productRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.imgBadge {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid rgb(215, 213, 213);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkout_image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.totalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+  font-family: "Jost";
+}
+.finalAmount {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Jost";
+}
+.finalAmount p {
+  padding-right: 20px;
+}
+.totalHeading {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Jost";
+}
+.giftBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.giftButton{
+  padding: 5px 20px;
+  background-color: rgb(231, 231, 231);
+  border: none;
+  border-radius: 7px;
+  color: black;
+  font-family: 'Jost';
+  font-weight: 500;
+  font-size: 20px;
+  border: 2px solid rgb(184, 183, 183);
+
+}
+.giftInput{
+  padding: 13px 8px ;
+  border: 2px solid rgb(201, 200, 200);
+  border-radius: 5px;
+  width: 65%;
+  background-color: white;
+    font-family: 'Jost';
+  font-weight: 500;
+  font-size: 14px;
+
+
+}
+
+.shippingHeading {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Jost";
+}
+.finalAmount span {
+  padding-right: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: "Jost";
+}
+
+.shippingHeading span {
+  padding-right: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: "Jost";
+}
+/* RESPONSIVENESS */
+
+/* Tablet & Smaller Desktop */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr; /* Stacked */
+  }
+  .formColumn {
+    order: 2; /* Form below summary on mobile/tablet */
+    border-right: none;
+  }
+  .summaryColumn {
+    order: 1;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .formColumn,
+  .summaryColumn {
+    padding: 20px;
+  }
+  .row {
+    flex-direction: column; /* Input rows stack on small screens */
+    gap: 0;
+  }
+}

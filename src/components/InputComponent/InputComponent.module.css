@@ -1,0 +1,66 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  width: 100%;
+  position: relative;
+}
+
+.label {
+  font-family: 'Jost', -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #616161;
+  padding-bottom: 10px;
+  padding-left: 2px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: 'Jost', sans-serif;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box; /* Crucial for responsiveness */
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1976d2; /* Shopify blue focus */
+  box-shadow: 0 0 0 1px #1976d2;
+}
+
+.input::placeholder {
+  color: #a0a0a0;
+}
+
+/* Error States */
+.inputError {
+  border-color: #d32f2f !important;
+  background-color: #fff8f8;
+}
+
+.errorText {
+  color: #d32f2f;
+  font-size: 11px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Handling Multiline (Textarea) */
+textarea.input {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .input {
+    padding: 10px 12px;
+    font-size: 16px; /* Prevents iOS auto-zoom on focus */
+  }
+}

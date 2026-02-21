@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ResetPassword from "./pages/auth/ResetPasswordPage/ResetPassword";
 import ProductDeatil from "./pages/ProductDetail/ProductDetail";
+import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
  
  
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/de" element={<ProductDeatil />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </main>
