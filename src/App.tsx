@@ -4,15 +4,14 @@ import Home from "./pages/home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ResetPassword from "./pages/auth/ResetPasswordPage/ResetPassword";
-import AnnouncementBar from "./components/AnnouncementBar/AnnouncementBar";
-
-// Import your components
-
+ 
+ 
 const App: React.FC = () => {
   return (
     <Router>
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <Navbar />
+      {/* <BottomNav /> */}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

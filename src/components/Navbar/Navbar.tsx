@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import SideMenu from "../SideMenu/SideMenu";
 import { app_logo } from "../../utils/data";
 import CheckoutSidebar from "../CheckoutSidebar/CheckoutSidebar";
+import BottomNav from "../BottomNav/BottomNav";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -87,6 +88,10 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
       <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <BottomNav
+        openCheckout={openCheckout}
+        setOpenCheckout={setOpenCheckout}
+      />
       {openCheckout && (
         <CheckoutSidebar
           openCheckout={openCheckout}

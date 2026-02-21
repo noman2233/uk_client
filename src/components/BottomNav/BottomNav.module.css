@@ -1,0 +1,71 @@
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.08);
+  z-index: 2000;
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top: 1px solid #f0f0f0;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+  color: #1a1a1a;
+  transition: transform 0.2s ease;
+}
+
+.navItem:active {
+  transform: scale(0.92); /* Subtle press effect for mobile */
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.icon {
+  font-size: 26px; /* Adjusted for pixel perfection */
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -12px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+@media (min-width: 769px) {
+  .bottomNav {
+    display: none;  
+  }
+}
