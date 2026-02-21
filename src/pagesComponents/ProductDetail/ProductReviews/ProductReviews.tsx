@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./productReviews.module.css";
-import OverAllReview from "../ProductOverallReview/OverAllReview";
-import WriteReview from "../../../pages/writeReview/WriteReview";
+ import WriteReview from "../../../pages/writeReview/WriteReview";
 import ReviewCard from "./ReviewCard";
+import ProductTotalRating from "../ProductTotalRating/ProductTotalRating";
 
 // interface ProductReviewsProps {
 //   toggleState: number;
@@ -26,7 +26,7 @@ const ProductReviews: React.FC  = () => {
         styles.product_review_main
       }
     >
-      <OverAllReview />
+      <ProductTotalRating />
       <button className={styles.add_review} onClick={openModal}>
         Write a review
       </button>

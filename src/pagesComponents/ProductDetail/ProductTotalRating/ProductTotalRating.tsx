@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./overallReviews.module.css";
+import styles from "./ProductTotalRating.module.css";
 
-const OverAllReview: React.FC = () => {
+const ProductTotalRating: React.FC = () => {
   return (
     <div className={styles.overall_review_box}>
       <div className={styles.overall_average_rating}>4.4</div>
@@ -51,4 +51,4 @@ const OverAllReview: React.FC = () => {
   );
 };
 
-export default OverAllReview;
+export default ProductTotalRating;

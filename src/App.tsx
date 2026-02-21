@@ -6,12 +6,13 @@ import Footer from "./components/Footer/Footer";
 import ResetPassword from "./pages/auth/ResetPasswordPage/ResetPassword";
 import ProductDeatil from "./pages/ProductDetail/ProductDetail";
 import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
+import AnnouncementBar from "./components/AnnouncementBar/AnnouncementBar";
  
  
 const App: React.FC = () => {
   return (
     <Router>
-      {/* <AnnouncementBar /> */}
+      <AnnouncementBar />
       <Navbar />
       {/* <BottomNav /> */}
       <main>
