@@ -1,0 +1,92 @@
+.overall_review_box {
+  background: white;
+  width: 100%; /* Changed from 480px for better flexibility */
+  max-width: 480px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(160, 160, 160, 0.1);
+  text-align: center;
+  margin: 20px 0px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.overall_average_rating {
+  font-size: 40px;
+  font-weight: 700;
+  color: #333;
+}
+
+.overall_stars {
+  color: #fbc02d;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.stars {
+  margin: 10px 0px;
+}
+
+.overall_total_reviews {
+  font-size: 18px;
+  font-weight: 600;
+  color: grey;
+}
+
+.overall_rating_bar {
+  display: flex;
+  align-items: center;
+  margin: 14px 0;
+}
+
+.overall_rating_bar span {
+  font-weight: 500;
+  font-size: 16px;
+  width: 20px;
+  flex-shrink: 0; /* Prevents the number from squishing */
+}
+
+.overall_progress_bar {
+  background: #ddd;
+  width: 100%;
+  height: 18px;
+  border-radius: 10px;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden; /* Ensures progress doesn't bleed out */
+}
+
+.overall_progress {
+  height: 100%; /* Height should fill the bar */
+  border-radius: 10px;
+  background: #4caf50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s ease; /* Adds a nice animation feel */
+}
+
+.overall_category_ratings {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+  .overall_review_box {
+    max-width: 95%; /* Fits better on tiny screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .overall_average_rating {
+    font-size: 32px;
+  }
+  
+  .overall_total_reviews {
+    font-size: 15px;
+  }
+}

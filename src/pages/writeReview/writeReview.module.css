@@ -1,0 +1,101 @@
+.feedback_container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 600px;
+  max-width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.handleSubmit {
+  width: 100%;
+}
+.close_x {
+  margin-bottom: 20px;
+  border: none;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.crosssIcon {
+  font-size: 20px;
+}
+.heaidng {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0px;
+}
+.desc {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px 0px;
+}
+
+.ReactModal__Content {
+  background-color: #f4f4f4 !important;
+}
+.ReactModal__Overlay {
+  background-color: #00000091 !important;
+}
+
+.feedback_container p {
+  color: grey;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.feedback_stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+.feedback_star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc;
+}
+.feedback_star.checked {
+  color: #fbc02d;
+}
+.feedback_textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  height: 150px;
+}
+.feedback_button {
+  width: 100%;
+  background: var(--gradient-wood);
+  color: white;
+  border: none;
+  padding: 14px 0px;
+  margin-top: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Jost";
+  margin-top:30px;
+}
+
+.feedback_buttonactions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .feedback-container {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,95 @@
+.product_review_main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 14%;
+}
+
+/* Added this since it's used in the ternary operator logic */
+.product_top_container_inActive {
+  display: none;
+}
+
+.product_review_card {
+  background: white;
+  width: 50%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(184, 184, 184, 0.1);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  margin: 20px 0px;
+}
+
+.product_review_card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product_profile_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product_review_name {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 5px 0;
+  text-align: justify;
+  padding-left: 20px;
+}
+
+.product_review_description {
+  font-size: 15px;
+  color: rgb(57, 56, 56);
+  font-weight: 300;
+  margin-top: 10px;
+  line-height: 26px;
+  text-align: justify;
+  padding-left: 20px;
+}
+
+.product_review_rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #fbc02d;
+  margin: 5px 0;
+}
+
+.product_review_person {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.product_review_star {
+  width: 15px;
+  height: 15px;
+}
+
+.add_review {
+  outline: none;
+  border: none;
+  background: var(--gradient-wood);
+  padding: 15px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  width: fit-content;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+  .product_review_card {
+    width: 90%;
+  }
+}
