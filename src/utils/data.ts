@@ -146,3 +146,36 @@ export const SHIPPING_DATA = [
     desc: "Custom-upholstered pieces, clearance items, and furniture that has been fully assembled or modified are not eligible for return or exchange.",
   },
 ];
+
+export const RETURN_DATA = [
+  {
+    id: 1,
+    title: "30-Day Return Window",
+    desc: "You have 30 calendar days to return an item from the date you received it. To be eligible for a return, your item must be unused and in the same condition that you received it.",
+  },
+  {
+    id: 2,
+    title: "Proof of Purchase",
+    desc: "Your item needs to have the receipt or proof of purchase (digital or physical). Please include a copy of your order confirmation email or invoice with your return package.",
+  },
+  {
+    id: 3,
+    title: "Refund Process",
+    desc: "Once we receive your item, we will inspect it and notify you that we have received your returned item. If your return is approved, we will initiate a refund to your original method of payment.",
+  },
+  {
+    id: 4,
+    title: "Shipping Costs",
+    desc: "You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.",
+  },
+  {
+    id: 5,
+    title: "Non-Returnable Items",
+    desc: "Certain items such as perishable goods, customized products, and personal care items (beauty products) are not eligible for returns due to hygiene and safety standards.",
+  },
+  {
+    id: 6,
+    title: "Exchanges",
+    desc: "We only replace items if they are defective or damaged. If you need to exchange it for the same item, please contact our support team to initiate the exchange process.",
+  },
+];

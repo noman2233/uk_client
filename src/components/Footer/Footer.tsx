@@ -68,10 +68,10 @@ const Footer: React.FC = () => {
                   <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Return Policy</Link>
+                  <Link to="/return-policy">Return Policy</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Shipping</Link>
+                  <Link to="/shipping-policy">Shipping</Link>
                 </li>
               </ul>
             </div>
@@ -98,8 +98,8 @@ const Footer: React.FC = () => {
         <div className={styles.bottomSection}>
           <p>© 2026 Graphy. All rights reserved.</p>
           <div className={styles.legalLinks}>
-            <Link to="/">Privacy Policy</Link>
-            <Link to="/">Terms of Service</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
           </div>
         </div>
       </div>

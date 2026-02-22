@@ -12,6 +12,7 @@ import AboutUs from "./pages/About/About";
 import TermsAndConditions from "./pages/LegalPges/TermsAndConditions";
 import PrivacyPolicy from "./pages/LegalPges/PrivacyPolicy";
 import ShippingPolicy from "./pages/LegalPges/ShippingPolicy";
+import Returnpolicy from "./pages/LegalPges/Returnpolicy";
 
 const App: React.FC = () => {
   return (
@@ -30,6 +31,7 @@ const App: React.FC = () => {
           <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/shiping-policy" element={<ShippingPolicy />} />
+          <Route path="/return-policy" element={<Returnpolicy />} />
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </main>

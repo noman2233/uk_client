@@ -1,14 +1,16 @@
+
+
 import React from 'react';
 import styles from './TermsAndConditions.module.css';
-import { SHIPPING_DATA } from '../../utils/data';
+import { RETURN_DATA } from '../../utils/data';
 
  
 
-const ShippingPolicy: React.FC = () => {
+const Returnpolicy: React.FC = () => {
   return (
     <div className={styles.pageContainer}>
       <main className={styles.contentWrapper}>
-        {SHIPPING_DATA.map((item) => (
+        {RETURN_DATA.map((item) => (
           <section key={item.id} className={styles.section}>
             <h2 className={styles.title}>{item.title}</h2>
             <p className={styles.description}>{item.desc}</p>
@@ -19,4 +21,4 @@ const ShippingPolicy: React.FC = () => {
   );
 };
 
-export default ShippingPolicy;
+export default Returnpolicy;
