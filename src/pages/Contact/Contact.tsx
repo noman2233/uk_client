@@ -1,5 +1,5 @@
-import ContactForm from "./ConatcatForm";
-import LondonMap from "../../pagesComponents/Contact/Map/Map";
+ import LondonMap from "../../pagesComponents/Contact/Map/Map";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (

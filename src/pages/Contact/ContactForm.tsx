@@ -2,7 +2,7 @@ import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { FaMailBulk } from "react-icons/fa";
 import * as Yup from "yup";
 import { Formik } from "formik";
-import styles from "./contact.module.css";
+import styles from "./Contact.module.css";
 import emailjs from "emailjs-com";
 import { ToastContainer } from "react-toastify";
 import { toast, Bounce } from "react-toastify";
