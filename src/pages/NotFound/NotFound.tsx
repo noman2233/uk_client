@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./NotFound.module.css";
 
@@ -6,9 +5,6 @@ const NotFound = () => {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
-    // If you have a JWT token saved, you could redirect to '/dashboard'
-    // const token = localStorage.getItem('token');
-    // token ? navigate('/dashboard') : navigate('/');
     navigate("/");
   };
 
