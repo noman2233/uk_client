@@ -19,7 +19,7 @@ const images = [
   "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
 ];
 
-const ProductDeatil: React.FC = () => {
+const ProductDetail: React.FC = () => {
   const [selectedImg, setSelectedImg] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [zoomPos, setZoomPos] = useState({ x: 0, y: 0, show: false });
@@ -204,4 +204,4 @@ const ProductDeatil: React.FC = () => {
   );
 };
 
-export default ProductDeatil;
+export default ProductDetail;
