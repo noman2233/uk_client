@@ -1,0 +1,77 @@
+.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: "Jost";
+}
+
+.contentWrapper {
+  width: 100%;
+  max-width: 1100px; /* Large devices */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+   font-size: 27px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.description {
+   font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0;
+  text-align: justify;
+}
+
+/* TABLET (Medium) */
+@media (max-width: 1024px) {
+  .contentWrapper {
+    max-width: 800px;
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+
+/* SMALL DEVICES / MOBILE */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 30px 15px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left; /* Better readability on small screens */
+  }
+  .contentWrapper {
+    gap: 30px;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px;
+  }
+  .description {
+    font-size: 14px;
+  }
+}

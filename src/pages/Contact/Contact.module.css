@@ -1,0 +1,207 @@
+/* ===== Section Layout ===== */
+.contactSection {
+  color: black;
+  padding: 80px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jost";
+}
+
+.contactContainer {
+  display: flex;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* ===== Left Side ===== */
+.contactInfo {
+  flex: 1;
+  min-width: 320px;
+}
+
+.contactSubtitle {
+  color: var(--color-blue);
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.contactTitle {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: "Jost", sans-serif;
+}
+
+.contactTitle span {
+  /* color: var(--color-blue); */
+  /* background: var(--gradient); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contactDesc {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  color: rgb(143, 142, 142);
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-family: "Jost", sans-serif;
+}
+
+/* ===== Info Items ===== */
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iconCircle {
+  
+  border-radius: 50%;
+  padding: 15px;
+  background: var(--gradient-wood);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_contact {
+  color: white;
+  font-size: 20px;
+}
+
+/* ===== Right Side ===== */
+.contactForm {
+  flex: 1;
+  background-color: rgb(250, 250, 250);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  min-width: 340px;
+}
+
+.contactForm_para {
+  margin-bottom: 20px;
+  color: black;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.Form_para {
+  margin-bottom: 30px;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  line-height: 30px;
+  font-family: "Jost";
+}
+
+/* ===== Form ===== */
+.formRow {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  /* flex-wrap: wrap; */
+  width: inherit;
+}
+
+.contact_input,
+.message_area {
+  flex: 1;
+  background-color: #1f1f1f;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: lightgray;
+  font-size: 15px;
+  outline: none;
+  font-family: "Jost";
+}
+
+.message_area {
+  width: 100%;
+  resize: none;
+  margin-bottom: 20px;
+}
+.infoHeading{
+    font-size: 15px;
+    font-family: 'Jost';
+    font-weight: 500;
+}
+
+.button_contact {
+  background: var(--gradient-wood);
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  color: lightgray;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-family: "Jost";
+  width: 100%;
+}
+
+.button_contact:hover {
+  transform: translateY(-2px);
+}
+
+/* When button is disabled */
+.button_contact:disabled {
+  cursor: not-allowed;
+  opacity: 0.6; /* Optional: make it look inactive */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .contactSection {
+    padding: 60px 40px;
+  }
+  .contactContainer {
+    flex-direction: column;
+  }
+  .contactForm {
+    margin-top: 30px;
+  }
+  .contactTitle {
+    font-size: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .contactForm {
+    min-width: 90%;
+    padding: 20px;
+  }
+}
+@media (max-width: 550px) {
+  .formRow {
+    width: inherit;
+    gap: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 40px 20px;
+  }
+  .contact_input,
+  .message_area {
+    font-size: 14px;
+  }
+  .button_contact {
+    width: 100%;
+  }
+}
