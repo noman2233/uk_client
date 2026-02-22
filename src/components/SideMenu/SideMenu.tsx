@@ -1,8 +1,6 @@
 import React from "react"; // Add this line
 import { Link } from "react-router-dom";
-import {
-  FiX,
-} from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 import styles from "./newsidemenu.module.css";
 import { motion } from "framer-motion";
 import { IoIosArrowForward } from "react-icons/io";
@@ -14,11 +12,7 @@ interface SideMenuProps {
   setIsMenuOpen: (open: boolean) => void;
   userName?: string;
 }
-const SideMenu: React.FC<SideMenuProps> = ({
-  isMenuOpen,
-  setIsMenuOpen,
- 
-}) => {
+const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   // const menuItems = [
   //   { icon: <FiHome />, label: "Home", path: "/" },
   //   { icon: <FiUser />, label: "Shop", path: "/" },
@@ -53,11 +47,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
         <div className={styles.header}>
           <div className={styles.userInfo}>
             <div className={styles.avatarWrapper}>
-              <img
-                src={app_logo}
-                alt="User Avatar"
-                className={styles.avatar}
-              />
+              <img src={app_logo} alt="User Avatar" className={styles.avatar} />
             </div>
             {/* <div className={styles.userText}>
               <span className={styles.greeting}>Hello,</span>
@@ -76,17 +66,6 @@ const SideMenu: React.FC<SideMenuProps> = ({
         {/* Navigation */}
         <nav className={styles.navLinks}>
           {menuItemsNew.map((item) => (
-            // <Link
-            //   key={item.label}
-            //   to={item.path}
-            //   className={styles.navItem}
-            //   onClick={() => setIsMenuOpen(false)}
-            // >
-            //   <span className={styles.icon}>{item.icon}</span>
-            //   <span className={styles.label}>{item.label}</span>
-            // </Link>
-            //
-            //
             <Link
               key={item.label}
               to={item.path}
@@ -100,13 +79,15 @@ const SideMenu: React.FC<SideMenuProps> = ({
             </Link>
           ))}
           <div className={styles.footer}>
-            <button
-              className={styles.logoutBtn}
-              onClick={() => console.log("Logout and clear JWT")}
-            >
-              <span>Login</span>
-              <CgLogIn />
-            </button>
+            <Link to="/login">
+              <button
+                className={styles.logoutBtn}
+                onClick={() => console.log("Logout and clear JWT")}
+              >
+                <span>Login</span>
+                <CgLogIn />
+              </button>
+            </Link>
           </div>
         </nav>
 

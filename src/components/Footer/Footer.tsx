@@ -6,6 +6,8 @@ import {
   FaLocationPin,
   FaMailchimp,
   FaPhone,
+  FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa6";
 import styles from "./Footer.module.css";
 import { app_logo } from "../../utils/data";
@@ -31,6 +33,12 @@ const Footer: React.FC = () => {
               </a>
               <a href="https://instagram.com" target="_blank" rel="noreferrer">
                 <FaInstagram className={styles.iconFooter} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <FaWhatsapp className={styles.iconFooter} />
+              </a>  
+                <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <FaYoutube className={styles.iconFooter} />
               </a>
             </div>
             <p className={styles.companyInfo}>
@@ -79,15 +87,15 @@ const Footer: React.FC = () => {
               <h4>Contact us</h4>
               <ul>
                 <div className={styles.footerContact}>
-                  <FaLocationPin className={styles.iconFooter} />
+                  <FaLocationPin className={styles.iconLocation} />
                   <p>Office 1405 92 Castle Street, Ireland</p>
                 </div>
                 <div className={styles.footerContact}>
-                  <FaMailchimp className={styles.iconFooter} />
+                  <FaMailchimp className={styles.iconLocation} />
                   <p>contact@career.co.uk</p>
                 </div>
                 <div className={styles.footerContact}>
-                  <FaPhone className={styles.iconFooter} />
+                  <FaPhone className={styles.iconLocation} />
                   <p>+9203246773140</p>
                 </div>
               </ul>

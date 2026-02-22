@@ -6,11 +6,13 @@ import {
   FiChevronRight,
   FiMinus,
   FiPlus,
+  FiHeart,
 } from "react-icons/fi";
 import styles from "./productDetail.module.css";
 import Description from "../../pagesComponents/ProductDetail/Description/Description";
 import ProductReviews from "../../pagesComponents/ProductDetail/ProductReviews/ProductReviews";
 import ReturnPolicyCard from "../../pagesComponents/ProductDetail/ReturnPolicy/ReturnPolicyCard";
+import { IoHeart } from "react-icons/io5";
 
 const images = [
   "https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg", // Main Lamp
@@ -115,7 +117,9 @@ const ProductDetail: React.FC = () => {
             <button className={styles.addToCart}>ADD TO CART</button>
           </div>
           <button className={styles.buyNow}>BUY IT NOW</button>
-          <button className={styles.whishList}>Add TO WISHLIST</button>
+          <button className={styles.whishList}>
+            <FiHeart className={styles.whishListIcons}/>
+          </button>
         </div>
       </div>
 

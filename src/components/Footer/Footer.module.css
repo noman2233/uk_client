@@ -123,7 +123,57 @@
   height: 80px;
   object-fit: cover;
 }
+/* .iconFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;  
+  color: rgb(35, 24, 24);  
+  transition: transform 0.3s ease, filter 0.3s ease;
+  font-size: 1.2rem;
+} */
+
+/* Hover effect for all */
+.iconFooter:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* 1. X (Twitter) - Black/Dark Gray */
+
+/* 2. Instagram - Gradient/Pink-Purple */
+.socialLinks a:nth-child(2) .iconFooter {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+/* 3. WhatsApp - Green */
+.socialLinks a:nth-child(3) .iconFooter {
+  background-color: #25d366;
+}
+
+/* 4. YouTube - Red */
+.socialLinks a:nth-child(4) .iconFooter {
+  background-color: #d40d0d;
+ 
+}
+
 .iconFooter {
+  background-color: #b4b4b4;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.iconLocation {
   color: black;
 }
 
