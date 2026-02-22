@@ -12,8 +12,7 @@ import styles from "./productDetail.module.css";
 import Description from "../../pagesComponents/ProductDetail/Description/Description";
 import ProductReviews from "../../pagesComponents/ProductDetail/ProductReviews/ProductReviews";
 import ReturnPolicyCard from "../../pagesComponents/ProductDetail/ReturnPolicy/ReturnPolicyCard";
-import { IoHeart } from "react-icons/io5";
-
+ 
 const images = [
   "https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg", // Main Lamp
   "https://images.pexels.com/photos/1125130/pexels-photo-1125130.jpeg",
