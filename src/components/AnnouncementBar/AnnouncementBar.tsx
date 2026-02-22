@@ -29,9 +29,9 @@ const AnnouncementBar: React.FC = () => {
         <div className={styles.rightSection}>
           <a href="/deals">Today's Deal</a>
           <div className={styles.divider}>|</div>
-          <a href="/faq">FAQ</a>
+          <a href="/privacy-policy">Policy</a>
           <div className={styles.divider}>|</div>
-          <a href="/certification">Get Certification</a>
+          <a href="/terms">Terms & Condition</a>
         </div>
       </div>
     </div>

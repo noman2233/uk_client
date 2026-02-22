@@ -1,0 +1,112 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 0 20px;
+  text-align: center;
+  font-family: "Jost", sans-serif; /* Recommended clean font */
+}
+
+.oopsText {
+  font-size: clamp(6rem, 20vw, 15rem); /* Responsive font sizing */
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -5px;
+  background-image: url("https://img.freepik.com/premium-photo/orange-galactic-spiral-cosmic-dance-stars-nebulae_1001175-36661.jpg?semt=ais_user_personalization&w=740&q=80");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+}
+
+.errorCode {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #000000;
+  margin-top: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.description {
+  color: #666666;
+  margin-top: 1rem;
+  max-width: 450px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.homeButton {
+  margin-top: 2.5rem;
+  padding: 14px 40px;
+  background: var(--gradient-wood);
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 71, 225, 0.2);
+}
+
+.homeButton:hover {
+  background: var(--gradient-wood);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 71, 225, 0.3);
+}
+
+.homeButton:active {
+  transform: translateY(0);
+}
+
+/* Tablet & Mobile tweaks */
+@media (max-width: 768px) {
+  .description {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+}
+
+/* --- Small Mobile Screens (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .container {
+    /* More breathing room at the top on small screens */
+    padding: 0 24px;
+  }
+
+  .oopsText {
+    /* Ensures the text fits without horizontal scrolling */
+    font-size: 5rem;
+    letter-spacing: -2px;
+  }
+
+  .errorCode {
+    font-size: 0.95rem;
+    /* Reduce margin for tighter mobile vertical space */
+    margin-top: 1rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    /* Keeps the text block narrow and readable */
+    max-width: 280px;
+  }
+
+  .homeButton {
+    margin-top: 2rem;
+    width: 100%; /* Full width button is easier to tap on mobile */
+    max-width: 300px;
+    padding: 12px 20px;
+    font-size: 0.8rem;
+  }
+}

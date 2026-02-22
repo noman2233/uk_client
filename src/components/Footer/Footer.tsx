@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                   <Link to="/return-policy">Return Policy</Link>
                 </li>
                 <li>
-                  <Link to="/shipping-policy">Shipping</Link>
+                  <Link to="/shiping-policy">Shipping</Link>
                 </li>
               </ul>
             </div>

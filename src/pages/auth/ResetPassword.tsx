@@ -1,7 +1,7 @@
-import React from 'react';
-import { Formik, Form } from 'formik';
-import styles from './ResetPassword.module.css';
-import * as Yup from 'yup';
+import React from "react";
+import { Formik, Form } from "formik";
+import styles from "./ResetPassword.module.css";
+import * as Yup from "yup";
 
 // interface FormValues {
 //   password: "";
@@ -10,17 +10,16 @@ import * as Yup from 'yup';
 
 const ResetPasswordSchema = Yup.object().shape({
   password: Yup.string()
-    .min(8, 'Too Short!')
-    .matches(/[a-z]/, 'Must contain lowercase')
-    .matches(/[A-Z]/, 'Must contain uppercase')
-    .matches(/[0-9]/, 'Must contain a number')
-    .matches(/[@$!%*?&]/, 'Must contain a symbol')
-    .required('Required'),
+    .min(8, "Too Short!")
+    .matches(/[a-z]/, "Must contain lowercase")
+    .matches(/[A-Z]/, "Must contain uppercase")
+    .matches(/[0-9]/, "Must contain a number")
+    .matches(/[@$!%*?&]/, "Must contain a symbol")
+    .required("Required"),
   confirmPassword: Yup.string()
-    .oneOf([Yup.ref('password')], 'Passwords must match')
-    .required('Required'),
+    .oneOf([Yup.ref("password")], "Passwords must match")
+    .required("Required"),
 });
-
 
 const ResetPassword: React.FC = () => {
   const handleSubmitForm = (values: any) => {
@@ -34,7 +33,8 @@ const ResetPassword: React.FC = () => {
         <div className={styles.passwordCard}>
           <h2 className={styles.title}>Create a New Password</h2>
           <p className={styles.subtitle}>
-            At least 8 characters with uppercase, lowercase, numbers, and symbols
+            At least 8 characters with uppercase, lowercase, numbers, and
+            symbols
           </p>
 
           <Formik
@@ -42,7 +42,14 @@ const ResetPassword: React.FC = () => {
             validationSchema={ResetPasswordSchema}
             onSubmit={handleSubmitForm}
           >
-            {({ handleChange, handleBlur, values, errors, touched, isSubmitting }) => (
+            {({
+              handleChange,
+              handleBlur,
+              values,
+              errors,
+              touched,
+              isSubmitting,
+            }) => (
               <Form className={styles.form}>
                 <div className={styles.inputGroup}>
                   <label>New Password</label>
@@ -54,11 +61,19 @@ const ResetPassword: React.FC = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.password}
-                      className={touched.password && errors.password ? styles.errorInput : ''}
+                      className={
+                        touched.password && errors.password
+                          ? styles.errorInput
+                          : ""
+                      }
                     />
-                    <span className={styles.eyeIcon}>👁️</span>
+                    {/* <span className={styles.eyeIcon}>
+                      <IoEye/>
+                    </span> */}
                   </div>
-                  {touched.password && errors.password && <span className={styles.errorText}>{errors.password}</span>}
+                  {touched.password && errors.password && (
+                    <span className={styles.errorText}>{errors.password}</span>
+                  )}
                 </div>
 
                 <div className={styles.inputGroup}>
@@ -71,15 +86,23 @@ const ResetPassword: React.FC = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.confirmPassword}
-                      className={touched.confirmPassword && errors.confirmPassword ? styles.errorInput : ''}
+                      className={
+                        touched.confirmPassword && errors.confirmPassword
+                          ? styles.errorInput
+                          : ""
+                      }
                     />
-                    <span className={styles.eyeIcon}>👁️</span>
+                    {/* <span className={styles.eyeIcon}>👁️</span> */}
                   </div>
-                  {touched.confirmPassword && errors.confirmPassword && <span className={styles.errorText}>{errors.confirmPassword}</span>}
+                  {touched.confirmPassword && errors.confirmPassword && (
+                    <span className={styles.errorText}>
+                      {errors.confirmPassword}
+                    </span>
+                  )}
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className={styles.submitBtn}
                   disabled={isSubmitting}
                 >

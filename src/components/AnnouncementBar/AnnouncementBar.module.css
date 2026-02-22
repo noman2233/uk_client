@@ -90,7 +90,7 @@
 /* Small Phones: Tighten padding */
 @media (max-width: 480px) {
   .announcementBar {
-    padding: 8px 0;
+    padding: 10px 0;
   }
   .promoSection {
     display: flex;

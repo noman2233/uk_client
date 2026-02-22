@@ -22,85 +22,84 @@ export const TERMS_DATA = [
   {
     id: 1,
     title: "Agreement to Terms",
-    desc: "By creating an account or making a purchase, you legally agree to these Terms and Conditions. These terms constitute a binding agreement between you and our furniture logistics platform.",
+    desc: "By accessing our platform, creating a registered account, or completing a furniture purchase, you acknowledge that you have read, understood, and legally agree to be bound by these Terms and Conditions. These terms constitute a legally binding agreement between you and our furniture logistics platform. If you do not agree with any part of these terms, you must immediately discontinue use of the site and our services.",
   },
   {
     id: 2,
     title: "User Account Responsibility",
-    desc: "You are responsible for maintaining the security of your account and JWT-based session tokens. Any orders placed through your account are your financial responsibility.",
+    desc: "You are solely responsible for maintaining the confidentiality and security of your account credentials and your JWT-based session tokens. You agree to accept full financial and legal responsibility for all activities and orders placed through your account. In the event of unauthorized access or a security breach of your login information, you must notify our security team immediately to invalidate the compromised session.",
   },
   {
     id: 3,
     title: "Product Representation",
-    desc: "We strive for color accuracy; however, due to lighting and monitor calibrations, we cannot guarantee that the color displayed on your screen perfectly matches the physical product.",
+    desc: "We make every effort to display the colors, textures, and dimensions of our furniture as accurately as possible. However, due to variations in professional studio lighting, individual monitor calibrations, and the natural characteristics of materials like wood grain or leather, we cannot guarantee that the physical product will perfectly match the digital representation on your screen. Minor variations are not considered manufacturing defects.",
   },
   {
     id: 4,
     title: "Pricing & Availability",
-    desc: "All prices are subject to change without notice. We reserve the right to cancel orders arising from pricing errors or unexpected stock shortages from our manufacturers.",
+    desc: "All prices, discounts, and availability are subject to change without prior notice. While we strive for 100% accuracy, we reserve the right to cancel any orders arising from typographical errors, pricing glitches, or unexpected stock shortages from our manufacturing partners. In the event of a cancellation after payment has been processed, a full refund will be issued to your original payment method immediately.",
   },
   {
     id: 5,
     title: "Intellectual Property",
-    desc: "All website designs, furniture photography, and custom code are the exclusive property of this company and protected under international copyright laws.",
+    desc: "All content included on this site—including website architecture, furniture photography, logos, descriptive text, and proprietary custom code—is the exclusive property of this company and is protected by international copyright, trademark, and intellectual property laws. Users are strictly prohibited from reproducing, duplicating, or exploiting any portion of this site for commercial purposes without express written consent.",
   },
   {
     id: 6,
     title: "Prohibited Site Use",
-    desc: "Users may not use automated systems (bots) to scrape pricing data or attempt to bypass our security headers to access unauthorized order information.",
+    desc: "You agree not to engage in any activity that interferes with the proper working of the platform. This includes, but is not limited to, using automated systems (bots, spiders, or scrapers) to harvest pricing data, attempting to bypass security headers, or trying to access unauthorized order information via API manipulation. Any attempt to reverse-engineer our authentication flow or JWT implementation will result in an immediate account ban and potential legal action.",
   },
   {
     id: 7,
     title: "Limitation of Liability",
-    desc: "In no event shall we be liable for indirect, incidental, or consequential damages resulting from the use of our products or delays in the shipping process.",
+    desc: "To the maximum extent permitted by law, our company shall not be held liable for any indirect, incidental, special, or consequential damages—including loss of profits or property damage—resulting from the use of our products or unavoidable delays in the freight shipping process. Our total liability for any claim related to a purchase shall not exceed the original purchase price paid by the customer for the specific item in question.",
   },
   {
     id: 8,
     title: "Governing Law",
-    desc: "These terms are governed by the laws of the jurisdiction where our headquarters are located. Any disputes will be settled in the state or federal courts therein.",
+    desc: "These Terms and Conditions and any separate agreements whereby we provide you services shall be governed by and construed in accordance with the laws of the jurisdiction where our corporate headquarters are located. You agree that any legal disputes or claims arising from your use of this site will be settled exclusively in the state or federal courts within that jurisdiction, and you waive any objection to such venue.",
   },
 ];
-
 export const PRIVACY_DATA = [
   {
     id: 1,
     title: "Information Collection",
-    desc: "We collect personal data (name, email, shipping address, and phone) specifically to process your furniture orders and provide delivery updates.",
+    desc: "We collect essential personal identifiers including your full name, email address, physical shipping address, and primary phone number. This data is gathered specifically to facilitate the processing of high-value furniture orders, verify your identity for secure transactions, and provide real-time delivery updates through our automated tracking systems.",
   },
   {
     id: 2,
     title: "Logistics Data Sharing",
-    desc: "To ensure delivery, we share your address and phone number with third-party freight carriers. They are prohibited from using this data for marketing purposes.",
+    desc: "To ensure your furniture arrives safely, we share your delivery address and contact number with our trusted third-party freight carriers and LTL logistics partners. These partners are contractually obligated to use your information solely for the purpose of coordinating delivery appointments and are strictly prohibited from using or selling your data for independent marketing purposes.",
   },
   {
     id: 3,
     title: "JWT & Cookie Usage",
-    desc: "We use JSON Web Tokens (JWT) for secure authentication and cookies to save your cart progress and preferences during your browsing session.",
+    desc: "Our platform utilizes JSON Web Tokens (JWT) to provide a secure, persistent login experience without storing sensitive passwords in your browser. Additionally, we use functional cookies to maintain your shopping cart progress, remember your site preferences, and ensure that your session remains authenticated across different tabs or during return visits to our storefront.",
   },
   {
     id: 4,
     title: "Payment Data Security",
-    desc: "We do not store full credit card numbers on our servers. All transactions are processed via encrypted, PCI-compliant third-party payment gateways.",
+    desc: "Your financial security is our top priority. We do not store full credit card numbers or CVV codes on our internal servers. All financial transactions are transmitted via Secure Socket Layer (SSL) technology and processed through fully encrypted, PCI-DSS compliant third-party payment gateways to ensure your sensitive billing information remains inaccessible to unauthorized parties.",
   },
   {
     id: 5,
     title: "Marketing & Opt-Out",
-    desc: "You may opt-in to our newsletter for furniture care tips. You can opt-out at any time via the 'Unsubscribe' link at the bottom of our emails.",
+    desc: "Users may choose to opt-in to our newsletter to receive furniture care guides, interior design tips, and exclusive promotional offers. Your participation is entirely voluntary. You maintain full control over your communication preferences and can opt-out at any any time by clicking the 'Unsubscribe' link found at the bottom of our emails or by updating your profile settings.",
   },
   {
     id: 6,
     title: "Data Retention",
-    desc: "We retain order history data for tax and warranty purposes. You may request the deletion of your personal account data at any time via our support portal.",
+    desc: "We retain order history and basic contact data as required by law for tax reporting, financial auditing, and furniture warranty fulfillment. However, we respect your right to privacy; you may request the permanent deletion of your personal account data at any time via our support portal, provided there are no active orders or outstanding legal obligations tied to the account.",
   },
   {
     id: 7,
     title: "Child Privacy",
-    desc: "Our website is intended for adults aged 18 and over. We do not knowingly collect personal information from children under the age of 13.",
+    desc: "Our website and services are intended strictly for adults aged 18 and over. We do not knowingly collect, solicit, or maintain personal information from children under the age of 13. If we become aware that a minor has provided us with personal data without verifiable parental consent, we will take immediate steps to delete that information from our database and terminate the associated account.",
   },
   {
     id: 8,
     title: "Policy Updates",
-    desc: "We may update this policy to reflect changes in privacy laws. We will notify registered users via email if significant changes are made to how we handle data.",
+    desc: "We reserve the right to update this Privacy Policy to reflect changes in global privacy laws or our internal data handling practices. If significant changes are made—specifically regarding how we share or secure your personal information—we will notify all registered users via their primary email address and place a prominent notice on our homepage for 30 days.",
   },
 ];
 
@@ -108,42 +107,42 @@ export const SHIPPING_DATA = [
   {
     id: 1,
     title: "Freight Delivery Process",
-    desc: "Large furniture is shipped via LTL (Less Than Truckload) freight. Delivery is usually curbside, meaning the driver will unload the item at the end of your driveway.",
+    desc: "Large or oversized furniture items are shipped via LTL (Less Than Truckload) freight to ensure maximum safety during transit. Standard delivery is strictly curbside, meaning the driver will unload the pallet at the end of your driveway or the curb of your building using a liftgate. Please note that drivers are not authorized to enter your home, navigate stairs, or assist with unboxing. We recommend having at least two people available to move the items inside upon arrival.",
   },
   {
     id: 2,
     title: "Appointment Scheduling",
-    desc: "The carrier will call you to schedule a delivery window. You must be present to sign for the delivery. Missed appointments will result in a $100 re-delivery fee.",
+    desc: "Once your order reaches the local delivery terminal, the carrier will contact you at the phone number provided during checkout to coordinate a 4-hour delivery window. An adult (18+) must be present to inspect and sign for the shipment. Accuracy of your contact info is vital; please be aware that missed appointments or unavailability during the agreed-upon window will result in a $100 re-delivery fee billed by the carrier.",
   },
   {
     id: 3,
     title: "Mandatory Damage Inspection",
-    desc: "You MUST inspect the furniture before the driver leaves. If the box is damaged, you must note it on the Bill of Lading (BOL) to be eligible for a replacement.",
+    desc: "You are legally required to inspect the exterior packaging and the furniture itself before the driver departs. If you observe any visible damage—such as crushed corners, holes, or moisture—you MUST write 'DAMAGED' clearly on the Bill of Lading (BOL) paperwork before signing. Your signature without a damage note acts as a legal acknowledgement that the item arrived in perfect condition, which may void your eligibility for a free replacement.",
   },
   {
     id: 4,
     title: "White-Glove Upgrades",
-    desc: "White-Glove service includes room-of-choice placement and packaging removal. This must be selected at checkout and cannot be added after the item has shipped.",
+    desc: "For a seamless experience, White-Glove service provides inside delivery to your room of choice (up to two flights of stairs), professional unpacking, and removal of all cardboard and debris. This premium service must be selected and paid for at the time of initial checkout. Please be advised that White-Glove upgrades cannot be added to an order once the item has been dispatched from our warehouse.",
   },
   {
     id: 5,
     title: "30-Day Return Window",
-    desc: "You may return furniture within 30 days of receipt. Items must be in their original packaging and in unassembled, like-new condition.",
+    desc: "We want you to be completely satisfied with your purchase. If you choose to return an item, you may do so within 30 days of receipt. To be eligible for a refund, items must be returned in their original, unopened factory packaging and remain in unassembled, like-new condition. Items that have been fully or partially assembled, or those missing original packaging, cannot be accepted for return.",
   },
   {
     id: 6,
     title: "Restocking & Shipping Fees",
-    desc: "Returns for 'Buyer’s Remorse' are subject to a 20% restocking fee. The original shipping cost is non-refundable, and the customer pays for return freight.",
+    desc: "Returns initiated due to 'Buyer’s Remorse' (e.g., preference, color choice, or size constraints) are subject to a 20% restocking fee to cover inspection and re-warehousing costs. Furthermore, original outbound shipping charges are non-refundable, and the customer is responsible for the full cost of the return freight shipment, which will be deducted from the final refund amount.",
   },
   {
     id: 7,
     title: "Concealed Damage Claims",
-    desc: "If you find damage after opening an intact box, you must report it within 48 hours with high-resolution photos for our claims department to review.",
+    desc: "In cases where the exterior box appears intact but the furniture inside is damaged (Concealed Damage), you must report the issue to our claims department within 48 hours of delivery. You will be required to submit high-resolution photos of the damaged item, the internal padding, and all sides of the external box. Claims submitted after the 48-hour window are typically denied by carriers as they assume damage occurred post-delivery.",
   },
   {
     id: 8,
     title: "Non-Returnable Items",
-    desc: "Custom-upholstered pieces, clearance items, and furniture that has been fully assembled or modified are not eligible for return or exchange.",
+    desc: "Please note that certain items are considered Final Sale and are ineligible for return or exchange. This includes custom-upholstered pieces made to order, items purchased from our 'Clearance' or 'Closeout' sections, and any furniture that has been modified, painted, or stained. Additionally, once a piece of furniture has been fully assembled, it is no longer eligible for return regardless of the reason.",
   },
 ];
 
@@ -151,31 +150,31 @@ export const RETURN_DATA = [
   {
     id: 1,
     title: "30-Day Return Window",
-    desc: "You have 30 calendar days to return an item from the date you received it. To be eligible for a return, your item must be unused and in the same condition that you received it.",
+    desc: "You have exactly 30 calendar days to initiate and ship back a return starting from the date of delivery. To maintain eligibility, the item must be completely unused, unassembled, and in the exact same condition as when it arrived. We cannot accept returns for items that show signs of wear, hair, smoke odors, or any modifications. Items returned after the 30-day window will be sent back to the customer at their expense.",
   },
   {
     id: 2,
     title: "Proof of Purchase",
-    desc: "Your item needs to have the receipt or proof of purchase (digital or physical). Please include a copy of your order confirmation email or invoice with your return package.",
+    desc: "Every return must be accompanied by a valid proof of purchase. This can be your digital order confirmation email, a printed invoice from your account dashboard, or a physical receipt. Please ensure a copy of your packing slip is placed inside the return box; without this documentation, our warehouse team may be unable to identify your return, which can lead to significant delays in processing your refund.",
   },
   {
     id: 3,
     title: "Refund Process",
-    desc: "Once we receive your item, we will inspect it and notify you that we have received your returned item. If your return is approved, we will initiate a refund to your original method of payment.",
+    desc: "Once your returned item arrives at our facility, it will undergo a thorough quality inspection by our team, typically within 3-5 business days. We will notify you via email regarding the approval or rejection of your refund based on the item's condition. If approved, the refund is automatically processed back to your original payment method. Please allow 5-10 business days for the credit to appear on your bank statement depending on your financial institution.",
   },
   {
     id: 4,
     title: "Shipping Costs",
-    desc: "You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.",
+    desc: "The customer is responsible for all costs associated with shipping the item back to our warehouse. Please note that original shipping charges paid at the time of purchase are non-refundable. If we provide a prepaid return label for your convenience, the actual cost of that return freight or postage will be strictly deducted from your final refund amount. We highly recommend using a trackable shipping service or purchasing shipping insurance for high-value items.",
   },
   {
     id: 5,
     title: "Non-Returnable Items",
-    desc: "Certain items such as perishable goods, customized products, and personal care items (beauty products) are not eligible for returns due to hygiene and safety standards.",
+    desc: "For safety, hygiene, and logistical reasons, certain products are strictly non-returnable. This includes all perishable goods, customized or 'made-to-order' furniture and upholstery, and personal care items (such as bedding, pillows, or beauty products). Clearance 'Final Sale' items and products that have been modified or fully assembled are also excluded from our return policy and cannot be sent back for a refund or store credit.",
   },
   {
     id: 6,
     title: "Exchanges",
-    desc: "We only replace items if they are defective or damaged. If you need to exchange it for the same item, please contact our support team to initiate the exchange process.",
+    desc: "Our exchange policy is limited specifically to items that arrive defective or damaged during transit. We do not offer direct exchanges for different colors or styles; in those cases, you must return the original item for a refund and place a new order. If you receive a faulty product, please contact our support team immediately with photos of the defect so we can facilitate a no-cost replacement for the exact same item.",
   },
 ];

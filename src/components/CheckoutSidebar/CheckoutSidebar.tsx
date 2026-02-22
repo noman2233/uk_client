@@ -22,7 +22,7 @@ const CheckoutSidebar: React.FC<CheckoutSidebarProps> = ({
         opacity: openCheckout ? 1 : 0,
       }}
       exit={{ x: "100%", opacity: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{ duration: .7, ease: "easeInOut" }}
       className={styles.checkout_sidebar}
     >
       <h2 className={styles.checkout_heading}>Checkout Details</h2>
