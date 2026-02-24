@@ -1,19 +1,20 @@
-import Hero from "../../components/Hero/Hero";
-import FeaturedShowcase from "../../components/FeaturedShowcase/FeaturedShowcase";
 import styles from "./Home.module.css";
-import ProductGrid from "../../components/ProductGrid/ProductGrid";
-import Gallary from "../../components/Gallery/Gallery";
-import LatestBlogs from "../../components/Blog/LatestBlogs";
+import Contact from "../Contact/Contact";
+import FAQPage from "../FAQPage/FAQPage";
+import HeroSection from "../../components/HeroSection/HeroSection";
+import AboutSection from "../../components/AboutSection/AboutSection";
+import CTASection from "../../components/CTASection/CTASection";
 const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <Hero />
+        {/* <Hero /> */}
+        <HeroSection />
       </div>
-      <FeaturedShowcase />
-      <ProductGrid />
-      <Gallary />
-      <LatestBlogs />
+      <AboutSection />
+      <Contact />
+      <FAQPage />
+      <CTASection />
     </div>
   );
 };

@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: var(--color-background);
+}
+
+.accordion {
+  width: 100%;
+  max-width: 700px;
+  margin: 20 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading {
+  font-size: 28px;
+  color: var(--color-primary);
+  font-size: 48px;
+  margin-bottom: 30px;
+  font-family: var(--font-text);
+  text-align: center;
+  font-weight: 700;
+  font-family: "Jost", sans-serif;
+  
+}
+
+.sub_heading {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+    font-family: "Jost", sans-serif;
+
+
+}
+
+.item {
+  /* border: 1px solid #353535; */
+  border-radius: 12px;
+  background: rgb(237, 237, 237);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 5px 10px ;
+  border-radius: 10px;
+}
+
+.header {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  background-color: var(--color-grey);
+  color: var(--color-primary);
+  font-family: "Jost", sans-serif;
+}
+
+.sub_header {
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  color: rgb(54, 54, 54);
+  transition: transform 0.3s ease;
+}
+
+.contentWrapper {
+  overflow: hidden;
+  /* background-color: #f9fafc; */
+}
+
+.content {
+  padding: 16px 20px;
+  color: var(--color-primary);
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  border-top: 1px solid #c7c6c6;
+  font-family: "Jost", sans-serif;
+}
+
+@media screen and (max-width: 769px) {
+  .heading,
+  .sub_heading,
+  .hightlight {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    padding: 25px;
+  }
+  .content {
+    font-size: 12.5px;
+  }
+  .header {
+    padding: 16px 10px;
+    font-size: 14.5px;
+  }
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .container {
+    padding: 25px;
+  }
+  .content {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 14px;
+    height: 14px;
+    margin: 0px 5px;
+  }
+}

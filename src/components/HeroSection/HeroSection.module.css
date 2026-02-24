@@ -1,0 +1,161 @@
+.heroContainer {
+  width: 100%;
+  padding: 60px 5%;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* TEXT STYLING */
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mainTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #e67e22; /* Orange color from image */
+  line-height: 1.2;
+}
+
+.highlight {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
+.subText {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.shopBtn {
+  width: fit-content;
+  background-color: #e67e22;
+  color: white;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.shopBtn:hover {
+  transform: scale(1.05);
+  background-color: #d35400;
+}
+
+/* RATING SYSTEM */
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.ratingNumber {
+  font-size: 28px;
+  font-weight: 800;
+  color: #333;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.starBox {
+  background-color: #27ae60; /* Green star background */
+  color: white;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGE STYLING */
+.imageColumn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imageMask {
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+  border-radius: 120px; /* Architectural rounded shape */
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RESPONSIVENESS */
+
+/* MEDIUM (Tablets) */
+@media (max-width: 1024px) {
+  .mainTitle {
+    font-size: 34px;
+  }
+  .contentWrapper {
+    gap: 20px;
+  }
+  .imageMask {
+    border-radius: 80px;
+  }
+}
+
+/* SMALL (Mobile) */
+@media (max-width: 768px) {
+  .heroContainer {
+    padding: 40px 20px;
+  }
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .imageColumn {
+    order: -1;
+  } /* Image moves to top on mobile */
+  .mainTitle {
+    font-size: 28px;
+  }
+  .subText {
+    font-size: 16px;
+  }
+  .imageMask {
+    border-radius: 60px;
+  }
+}
+
+/* EXTRA SMALL (Phones) */
+@media (max-width: 480px) {
+  .shopBtn {
+    width: 100%;
+    text-align: center;
+  }
+  .ratingNumber {
+    font-size: 24px;
+  }
+}

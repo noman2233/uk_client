@@ -1,257 +1,188 @@
 .footer {
-  background-color: rgb(
-    244,
-    244,
-    244
-  ); /* Matches the clean black of the Graphy image */
-  padding: 80px 5% 40px 5%;
-  border-top: 1px solid #f0f0f0;
-  font-family: "Inter", sans-serif;
-  color: #1a1a1a;
+  background: url("https://i.ibb.co/p6jXZGtS/Whats-App-Image-2026-02-24-at-2-02-03-PM.jpg") center center no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif; /* Replace with your primary font */
+  /* background-color: red; */
+  
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  opacity: 0.88;
+  padding: 60px 20px;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.topSection {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 40px;
-  margin-bottom: 60px;
 }
 
-/* Brand Section */
-.brandColumn {
-  flex: 0 1 350px;
-  /* flex: 0 4 300px; */
+.logoSection {
+  flex: 1 1 250px;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
+  max-width: 200px;
+  height: auto;
+}
+
+.column {
+  flex: 1 1 200px;
+}
+
+.column h3 {
   font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-.link,
-.logoLink {
-  text-decoration: none;
-  color: inherit;
-}
-
-.companyInfo {
-  font-size: 0.9rem;
-  font-family: var(--font-family-serif);
-  padding-top: 10px;
-  color: black;
-}
-
-.logoIcon {
-  background: #1a1a1a;
-  color: black;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  font-size: 0.8rem;
-}
-
-.description {
-  color: #666;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  margin-bottom: 24px;
-}
-.footerContact {
-  display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  gap: 10px;
-  margin: 15px 0px;
-}
-.footerContact p {
-  color: black;
-  font-family: var(--font-family-serif);
-}
-
-.socialLinks {
-  display: flex;
-  gap: 20px;
-  font-size: 1.2rem;
-}
-
-.socialLinks a {
-  color: #1a1a1a;
-  transition: opacity 0.2s;
-}
-
-.socialLinks a:hover {
-  opacity: 0.7;
-}
-
-/* Links Grid */
-.linksGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 200px);
-  gap: 40px;
-}
-
-.linkGroup h4 {
-  font-size: 1.2rem;
+  margin-bottom: 25px;
   font-weight: 600;
-  margin-bottom: 20px;
-  color: black;
 }
 
-.linkGroup ul {
+.column ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.linkGroup li {
+.column li {
   margin-bottom: 12px;
 }
 
-.applogo {
-  width: 150px;
-  height: 80px;
-  object-fit: cover;
+.column li a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
 }
-/* .iconFooter {
+
+.column li a span {
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+
+.column li a:hover {
+  color: #ffffff;
+}
+.addressIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.iconContact {
+  font-size: 25px;
+}
+.iconMail {
+  font-size: 13px;
+}
+.address p {
+  margin: 5px 0;
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-family: "inter";
+}
+
+.email {
+  margin-top: 15px !important;
+}
+
+.socialGrid {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+.socialBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  background-color: #3b3b3b; /* The base dark grey from your image */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  overflow: hidden; /* Ensures background colors don't bleed */
+}
+
+.socialBox:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.iconFooter {
+  color: white;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;  
-  color: rgb(35, 24, 24);  
-  transition: transform 0.3s ease, filter 0.3s ease;
-  font-size: 1.2rem;
-} */
-
-/* Hover effect for all */
-.iconFooter:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.1);
 }
 
-/* 1. X (Twitter) - Black/Dark Gray */
+/* HOVER EFFECTS - Pixel Perfect matching */
+.socialBox:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.2);
+}
 
-/* 2. Instagram - Gradient/Pink-Purple */
-.socialLinks a:nth-child(2) .iconFooter {
+/* Targeting by index using the map order:
+   1: TikTok, 2: Instagram, 3: X, 4: Facebook, 5: eBay
+*/
+
+/* Instagram Gradient */
+.socialBox:nth-child(2) {
   background: radial-gradient(
     circle at 30% 107%,
     #fdf497 0%,
-    #fdf497 5%,
     #fd5949 45%,
     #d6249f 60%,
     #285aeb 90%
   );
 }
 
-/* 3. WhatsApp - Green */
-.socialLinks a:nth-child(3) .iconFooter {
-  background-color: #25d366;
+.socialBox:nth-child(3) {
+  background: #000000;
+}
+/* Facebook Blue */
+.socialBox:nth-child(4) {
+  background-color: #1877f2;
 }
 
-/* 4. YouTube - Red */
-.socialLinks a:nth-child(4) .iconFooter {
-  background-color: #d40d0d;
- 
+/* X (Twitter) and TikTok usually stay dark, but you can add specific ones: */
+.socialBox:nth-child(1) {
+  background-color: #000000; /* TikTok Black */
+}
+.socialBox:nth-child(5) {
+  background-color: #186900; /* TikTok Black */
 }
 
-.iconFooter {
-  background-color: #b4b4b4;
-  padding: 10px;
-  border-radius: 10px;
-  color: white;
-}
+/* Responsiveness */
 
-.iconLocation {
-  color: black;
-}
-
-.linkGroup a {
-  text-decoration: none;
-  color: black;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
-.linkGroup a:hover {
-  color: grey;
-}
-
-/* Bottom Section */
-.bottomSection {
-  padding-top: 30px;
-  border-top: 1px solid #868484;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ;
-  font-size: 0.85rem;
-}
-
-.legalLinks {
-  display: flex;
-  gap: 24px;
-}
-
-.legalLinks a {
-  text-decoration: none;
-  color: black;
-}
-
-.legalLinks a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Breakpoints */
-@media (max-width: 1024px) {
-  .topSection {
-    flex-direction: column;
-  }
-
-  .linksGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .brandColumn {
-    flex: 0 1 239px;
+/* Tablets (Medium) */
+@media (max-width: 992px) {
+  .container {
+    justify-content: flex-start;
   }
 }
 
-@media (max-width: 768px) {
+/* Phones (Small) */
+@media (max-width: 600px) {
   .footer {
-    padding-top: 50px;
+    padding: 40px 15px;
   }
-
-  .linksGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .container {
+    flex-direction: column;
     gap: 30px;
   }
-
-  .bottomSection {
-    flex-direction: column-reverse;
-    gap: 20px;
-    align-items: flex-start;
+  .logoSection {
+    text-align: center;
+    margin-bottom: 20px;
   }
-}
-
-@media (max-width: 480px) {
-  .linksGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .legalLinks {
-    flex-direction: column;
-    gap: 12px;
+  .column h3 {
+    margin-bottom: 15px;
   }
 }

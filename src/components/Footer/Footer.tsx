@@ -1,113 +1,138 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Import Link
-import {
-  FaXTwitter,
-  FaInstagram,
-  FaLocationPin,
-  FaMailchimp,
-  FaPhone,
-  FaWhatsapp,
-  FaYoutube,
-} from "react-icons/fa6";
+ import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
-import { app_logo } from "../../utils/data";
 
-const Footer: React.FC = () => {
+// Using arrays for the map method as requested
+const quickLinks = [
+  { name: "Home", path: "/" },
+  { name: "Products", path: "/products" },
+  { name: "About Us", path: "/about" },
+  { name: "Contact Us", path: "/contact" },
+  { name: "Privacy Policy", path: "/privacy" },
+  { name: "Terms & Conditions", path: "/terms" },
+  { name: "Shipping Policy", path: "/shipping" },
+  { name: "Refund Policy", path: "/refund" },
+  { name: "Company Details", path: "/details" },
+  { name: "Affiliate Program", path: "/affiliate" },
+];
+
+const latestForSale = [
+  { name: "Sofa", path: "/category/sofa" },
+  { name: "Bed", path: "/category/bed" },
+  { name: "Furniture", path: "/category/furniture" },
+  { name: "Chair", path: "/category/chair" },
+  { name: "Dining", path: "/category/dining" },
+];
+import {
+  FaTiktok,
+  FaInstagram,
+  FaXTwitter,
+  FaFacebookF,
+  FaEbay,
+} from "react-icons/fa6"; // Use fa6 for the latest X logo
+ import { FiGlobe, FiMail } from "react-icons/fi";
+
+const socialIcons = [
+  {
+    name: "TikTok",
+    icon: <FaTiktok />,
+    url: "https://www.tiktok.com/@nidripfurniture",
+  },
+  {
+    name: "Instagram",
+    icon: <FaInstagram />,
+    url: "https://www.instagram.com/nidripfurniture",
+  },
+  {
+    name: "X",
+    icon: <FaXTwitter />,
+    url: "https://twitter.com/nidripfurniture",
+  },
+  {
+    name: "Facebook",
+    icon: <FaFacebookF />,
+    url: "https://www.facebook.com/nidripfurniture",
+  },
+  {
+    name: "eBay",
+    icon: <FaEbay />,
+    url: "https://www.ebay.co.uk/usr/nidripfurniture",
+  },
+];
+
+const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.topSection}>
-          <div className={styles.brandColumn}>
-            <Link to="/" className={styles.logoLink}>
-              <div className={styles.logo}>
-                {/* <div className={styles.logoIcon}>//</div> */}
+      <div className={styles.wrapper}>
+        <div className={styles.container}>
+          {/* Logo Section */}
+          <div className={styles.logoSection}>
+            <img
+              src="https://i.ibb.co/qYkhbhq7/Whats-App-Image-2026-02-24-at-1-52-46-PM-removebg-preview.png"
+              alt="NI Drip Central Furniture"
+              className={styles.logo}
+            />
+          </div>
 
-                <img src={app_logo} className={styles.applogo} />
-                {/* <span className={styles.logoText}>Graphy</span> */}
+          {/* Quick Links */}
+          <div className={styles.column}>
+            <h3>Quick Links</h3>
+            <ul>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.path}>
+                    <span>→</span> {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Latest for Sale */}
+          <div className={styles.column}>
+            <h3>Latest for Sale</h3>
+            <ul>
+              {latestForSale.map((item, index) => (
+                <li key={index}>
+                  <Link to={item.path}>
+                    <span>→</span> {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Section */}
+          <div className={styles.column}>
+            <h3>Contact</h3>
+            <address className={styles.address}>
+              <div className={styles.addressIcon}>
+                <FiGlobe   className={styles.iconContact} />
+                <p>
+                  Office 1405 92 Castle Street, Belfast BT1 1HE Northern Ireland
+                </p>
               </div>
-            </Link>
-            {/* Social links usually remain <a> because they go to external sites */}
-            <div className={styles.socialLinks}>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                <FaXTwitter className={styles.iconFooter} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                <FaInstagram className={styles.iconFooter} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                <FaWhatsapp className={styles.iconFooter} />
-              </a>  
-                <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                <FaYoutube className={styles.iconFooter} />
-              </a>
-            </div>
-            <p className={styles.companyInfo}>
-              Our furniture shop blends timeless craftsmanship with modern
-              design to transform your living spaces into personalized
-              sanctuaries of comfort and style.
-            </p>
-          </div>
+              <div className={styles.addressIcon}>
+                <FiMail   className={styles.iconMail} />
+                <p className={styles.email}>contact@nidripfurniture.co.uk</p>
+              </div>
+            </address>
 
-          <div className={styles.linksGrid}>
-            <div className={styles.linkGroup}>
-              <h4>Product</h4>
-              <ul>
-                <li>
-                  <Link to="/features">Products</Link>
-                </li>
-                <li>
-                  <Link to="/pricing">Categories</Link>
-                </li>
-                <li>
-                  <Link to="/integrations">Featured Product</Link>
-                </li>{" "}
-                <li>
-                  <Link to="/integrations">Our Team </Link>
-                </li>
-              </ul>
+            <div className={styles.socialGrid}>
+              {/* You can replace these placeholders with actual FontAwesome or SVG icons */}
+              {socialIcons.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.socialBox}
+                  aria-label={social.name}
+                >
+                  {/* Rendering the icon component directly from data */}
+                  <span className={styles.iconFooter}>{social.icon}</span>
+                </a>
+              ))}
             </div>
-            <div className={styles.linkGroup}>
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
-                <li>
-                  <Link to="/return-policy">Return Policy</Link>
-                </li>
-                <li>
-                  <Link to="/shiping-policy">Shipping</Link>
-                </li>
-              </ul>
-            </div>
-            <div className={styles.linkGroup}>
-              <h4>Contact us</h4>
-              <ul>
-                <div className={styles.footerContact}>
-                  <FaLocationPin className={styles.iconLocation} />
-                  <p>Office 1405 92 Castle Street, Ireland</p>
-                </div>
-                <div className={styles.footerContact}>
-                  <FaMailchimp className={styles.iconLocation} />
-                  <p>contact@career.co.uk</p>
-                </div>
-                <div className={styles.footerContact}>
-                  <FaPhone className={styles.iconLocation} />
-                  <p>+9203246773140</p>
-                </div>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.bottomSection}>
-          <p>© 2026 Graphy. All rights reserved.</p>
-          <div className={styles.legalLinks}>
-            <Link to="/privacy-policy">Privacy Policy</Link>
-            <Link to="/terms">Terms of Service</Link>
           </div>
         </div>
       </div>

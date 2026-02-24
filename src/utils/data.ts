@@ -178,3 +178,82 @@ export const RETURN_DATA = [
     desc: "Our exchange policy is limited specifically to items that arrive defective or damaged during transit. We do not offer direct exchanges for different colors or styles; in those cases, you must return the original item for a refund and place a new order. If you receive a faulty product, please contact our support team immediately with photos of the defect so we can facilitate a no-cost replacement for the exact same item.",
   },
 ];
+
+export const FAQ_DATA = [
+  {
+    category: "For Shipping",
+    items: [
+      {
+        title: "How long does it take for home delivery?",
+        content: "Standard delivery takes 3-5 business days.",
+      },
+      {
+        title: "Do you deliver on Weekend?",
+        content: "Yes, we offer Saturday delivery in select areas.",
+      },
+      {
+        title: "I paid £5.95 for delivery, why did I not get it next day?",
+        content: "Next day delivery applies to orders placed before 2 PM.",
+      },
+      {
+        title: "Can I collect from a local store?",
+        content: "Yes, use our Click & Collect service at checkout.",
+      },
+    ],
+  },
+  {
+    category: "Order & Payment",
+    items: [
+      {
+        title: "How long does it take for home delivery?",
+        content: "Payment processing is usually instant.",
+      },
+      {
+        title: "I paid £5.95 for delivery, why did I not get it next day?",
+        content: "Check your confirmation email for the chosen tier.",
+      },
+      {
+        title: "Do you deliver on Weekend?",
+        content: "Weekend delivery options are visible at checkout.",
+      },
+      {
+        title: "Can I collect from a local store?",
+        content: "Store collection is available for most payment methods.",
+      },
+    ],
+  },
+  {
+    category: "Warranty & Support",
+    items: [
+      {
+        title: "How long does it take for home delivery?",
+        content: "Warranty support response time is 24 hours.",
+      },
+      {
+        title: "Do you deliver on Weekend?",
+        content: "Our support team is available Mon-Fri.",
+      },
+      {
+        title: "I paid £5.95 for delivery, why did I not get it next day?",
+        content: "Shipping fees are non-refundable for warranty returns.",
+      },
+    ],
+  },
+  {
+    category: "Product Return",
+    items: [
+      {
+        title: "How long does it take for home delivery?",
+        content: "Returns are processed within 7-10 days.",
+      },
+      {
+        title: "Do you deliver on Weekend?",
+        content: "Returns can be dropped off at lockers 24/7.",
+      },
+      {
+        title: "I paid £5.95 for delivery, why did I not get it next day?",
+        content: "Return shipping costs may vary.",
+      },
+    ],
+  },
+];

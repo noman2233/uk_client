@@ -7,7 +7,7 @@ interface InputProps {
   value: string;
   onChangeText: (e: React.ChangeEvent<any>) => void;
   onBlur: (e: any) => void;
-  error?: string;
+  error?: string ;
   type?: string;
   isMultiline?: boolean;
 }

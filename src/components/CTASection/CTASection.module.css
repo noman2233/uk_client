@@ -1,0 +1,109 @@
+.ctaContainer {
+  width: 100%;
+  height: 450px; /* Standard hero/CTA height */
+  background-image: url("https://lilyautumn.co.uk/cdn/shop/files/2362_b041d818-345e-411c-ad3f-1d89c02379c3.jpg?v=1706432232"); /* Replace with your local asset path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay to ensure text contrast like the original image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Adjust opacity to match your visual preference */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  padding: 0 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.orderButton {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2px; /* Slight rounding for a modern feel */
+}
+
+.orderButton:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* Tablets (Medium) */
+@media (max-width: 768px) {
+  .ctaContainer {
+    height: 400px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (Small) */
+@media (max-width: 480px) {
+  .ctaContainer {
+    height: auto;
+    padding: 60px 0;
+  }
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .orderButton {
+    padding: 12px 30px;
+    font-size: 1rem;
+    width: 80%; /* Easier to tap on mobile */
+  }
+}
