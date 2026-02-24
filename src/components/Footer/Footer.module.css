@@ -1,13 +1,13 @@
 .footer {
-  background: url("https://i.ibb.co/xdZxMXX/Chat-GPT-Image-Feb-24-2026-11-52-30-PM.png") center center no-repeat;
+  background: url("https://i.ibb.co/xdZxMXX/Chat-GPT-Image-Feb-24-2026-11-52-30-PM.png")
+    center center no-repeat;
   background-size: cover;
   background-position: center;
-  
+
   color: #ffffff;
 
   font-family: "Inter", sans-serif; /* Replace with your primary font */
   /* background-color: red; */
-  
 }
 .wrapper {
   width: 100%;
@@ -39,12 +39,10 @@
   flex: 1 1 200px;
 }
 
-.arrowForward{
+.arrowForward {
   color: var(--color-blue);
   font-size: 20px;
 }
-
- 
 
 .column h3 {
   font-size: 1.5rem;
@@ -69,9 +67,8 @@
   transition: color 0.3s ease;
   padding-bottom: 6px;
   font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
-
 }
 
 .column li a span {
@@ -195,5 +192,8 @@
   }
   .column h3 {
     margin-bottom: 15px;
+  }
+  .column {
+    flex: 2;
   }
 }
