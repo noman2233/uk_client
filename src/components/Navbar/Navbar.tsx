@@ -141,7 +141,10 @@ const Navbar = () => {
               <IoSearchOutline className={styles.navbarIcon} />
             </button>
 
-            <button className={styles.iconBtn}>
+            <button
+              className={styles.iconBtn}
+              onClick={() => setOpenCheckout(true)}
+            >
               <IoBriefcaseOutline className={styles.navbarIcon} />
               <span className={styles.badge}>1</span>
             </button>
