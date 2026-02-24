@@ -4,6 +4,7 @@ import FAQPage from "../FAQPage/FAQPage";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import AboutSection from "../../components/AboutSection/AboutSection";
 import CTASection from "../../components/CTASection/CTASection";
+import ReviewsSlider from "../../components/ReviewsSlider/ReviewsSlider";
 const Home = () => {
   return (
     <div className={styles.container}>
@@ -14,6 +15,7 @@ const Home = () => {
       <AboutSection />
       <Contact />
       <FAQPage />
+      <ReviewsSlider />
       <CTASection />
     </div>
   );

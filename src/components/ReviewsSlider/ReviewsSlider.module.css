@@ -1,0 +1,170 @@
+.section {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.slick-slide > div {
+  margin: 0 20px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+ 
+.sliderContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px; /* just page-edge breathing room */
+}
+
+/* ─── Viewport & track ─────────────────────────────────────────────────────── */
+.viewport {
+  overflow: hidden;
+  flex: 1; /* fill all space between the two arrow buttons */
+  min-width: 0; /* prevent flex blowout */
+}
+
+.track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* ─── Cards ────────────────────────────────────────────────────────────────── */
+.cardWrapper {
+  /* flex-basis is set inline (100 / itemsToShow %) */
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatarWrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.googleIcon {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 11px;
+  font-weight: 900;
+  color: #4285f4;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 5px 0 2px;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 15px;
+}
+
+.text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+  min-height: 80px;
+  max-width: 260px;
+}
+
+.readMore {
+  background: none;
+  border: none;
+  color: #999;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* ─── Arrow buttons ────────────────────────────────────────────────────────── */
+/*
+  Arrows are flex siblings of .viewport — no absolute positioning needed.
+  flex-shrink:0 keeps them at a fixed size regardless of viewport width.
+*/
+.navBtn {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  font-size: 2.8rem;
+  line-height: 1;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBtn:hover {
+  color: #333;
+}
+
+/* .left / .right no longer need position values — kept for clarity only */
+.left {
+  order: -1; /* always first */
+}
+
+.right {
+  order: 1; /* always last */
+}
+
+/* ─── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .sliderContainer {
+    padding: 0 10px;
+    gap: 4px;
+  }
+
+  .navBtn {
+    font-size: 2.2rem;
+  }
+}
