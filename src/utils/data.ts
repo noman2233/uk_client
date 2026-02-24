@@ -1,6 +1,12 @@
 export const app_logo =
   "https://i.ibb.co/qYkhbhq7/Whats-App-Image-2026-02-24-at-1-52-46-PM-removebg-preview.png";
 // "https://i.ibb.co/nMKDbkKf/download-4-artguru.png";
+export const dark_logo =
+  "https://i.ibb.co/qYkhbhq7/Whats-App-Image-2026-02-24-at-1-52-46-PM-removebg-preview.png";
+// "https://i.ibb.co/nMKDbkKf/download-4-artguru.png";
+export const colored_logo =
+  "https://i.ibb.co/Y4yzkz8Q/Whats-App-Image-2026-02-25-at-1-09-47-AM.jpg";
+// "https://i.ibb.co/nMKDbkKf/download-4-artguru.png";
 
 export const shop_email = "naoman@gmail.com";
 export const shop_phone = "03246773140";
@@ -255,5 +261,63 @@ export const FAQ_DATA = [
         content: "Return shipping costs may vary.",
       },
     ],
+  },
+];
+
+interface Testimonial {
+  id: number;
+  name: string;
+  date: string;
+  rating: number;
+  text: string;
+  avatarColor: string;
+  initials: string;
+}
+
+export const TestimonialsData: Testimonial[] = [
+  {
+    id: 1,
+    name: "Mags",
+    date: "21/02/2025",
+    rating: 5,
+    text: "I got a really nice mattress for my daughter's bed. Great value for money and absolutely delighted with it.",
+    avatarColor: "#a31d58",
+    initials: "M",
+  },
+  {
+    id: 2,
+    name: "Ted",
+    date: "25/01/2025",
+    rating: 5,
+    text: "Bought a spinal max deluxe mattress off Peter in furniture designs in the old bawn road, I would highly recommend.",
+    avatarColor: "#8e44ad",
+    initials: "B",
+  },
+  {
+    id: 3,
+    name: "Irene McKim",
+    date: "15/01/2025",
+    rating: 5,
+    text: "Best place to buy furniture!! The quality speaks for itself!! And the guys in the shop are so helpful!!",
+    avatarColor: "#2c3e50",
+    initials: "I",
+  },
+  {
+    id: 4,
+    name: "Michelle Smartt",
+    date: "11/12/2024",
+    rating: 5,
+    text: "Customer service was great. Great choice of suites with different options size, colour, types of legs.",
+    avatarColor: "#7f8c8d",
+    initials: "M",
+  },
+  {
+    id: 5,
+    name: "New User",
+    date: "05/02/2026",
+    rating: 5,
+    text: "Amazing experience! The furniture is top notch and the delivery was seamless.",
+    avatarColor: "#27ae60",
+    initials: "N",
   },
 ];

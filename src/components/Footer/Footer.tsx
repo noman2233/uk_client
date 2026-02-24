@@ -28,7 +28,6 @@ import {
   FaXTwitter,
   FaFacebookF,
   FaEbay,
-  FaPersonArrowUpFromLine,
 } from "react-icons/fa6"; // Use fa6 for the latest X logo
 import { FiGlobe, FiMail } from "react-icons/fi";
 import { BsArrowRight } from "react-icons/bs";

@@ -5,7 +5,7 @@ import styles from "./newsidemenu.module.css";
 import { motion } from "framer-motion";
 import { IoIosArrowForward } from "react-icons/io";
 import { CgLogIn } from "react-icons/cg";
-import { app_logo } from "../../utils/data";
+import { colored_logo } from "../../utils/data";
 
 interface SideMenuProps {
   isMenuOpen: boolean;
@@ -14,22 +14,16 @@ interface SideMenuProps {
 }
 const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   // const menuItems = [
-  //   { icon: <FiHome />, label: "Home", path: "/" },
-  //   { icon: <FiUser />, label: "Shop", path: "/" },
-  //   { icon: <AiFillProduct />, label: "Products", path: "/" },
-  //   { icon: <FiInfo />, label: "About", path: "/" },
-  //   { icon: <FiPhone />, label: "Contact", path: "/" },
-  //   { icon: <FiHelpCircle />, label: "Help", path: "/" },
-  //   { icon: <FiSettings />, label: "Setting", path: "/" },
-  // ];
+
   const menuItemsNew = [
     { icon: <IoIosArrowForward />, label: "Home", path: "/" },
     { icon: <IoIosArrowForward />, label: "Shop", path: "/" },
     { icon: <IoIosArrowForward />, label: "Products", path: "/" },
-    { icon: <IoIosArrowForward />, label: "Categories", path: "/" },
     { icon: <IoIosArrowForward />, label: "Contact", path: "/" },
-    { icon: <IoIosArrowForward />, label: "Help", path: "/" },
-    { icon: <IoIosArrowForward />, label: "Setting", path: "/" },
+    { icon: <IoIosArrowForward />, label: "FAQ's", path: "/" },
+    { icon: <IoIosArrowForward />, label: "About", path: "/" },
+    { icon: <IoIosArrowForward />, label: "Login", path: "/" },
+    { icon: <IoIosArrowForward />, label: "SignUp", path: "/" },
   ];
 
   return (
@@ -47,7 +41,7 @@ const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
         <div className={styles.header}>
           <div className={styles.userInfo}>
             <div className={styles.avatarWrapper}>
-              <img src={app_logo} alt="User Avatar" className={styles.avatar} />
+              <img src={colored_logo} alt="User Avatar" className={styles.avatar} />
             </div>
             {/* <div className={styles.userText}>
               <span className={styles.greeting}>Hello,</span>

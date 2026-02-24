@@ -66,8 +66,7 @@
 }
 
 .avatarWrapper {
-  width: 150px;
-  height: 80px;
+  width: 100px;
   object-fit: cover;
 }
 

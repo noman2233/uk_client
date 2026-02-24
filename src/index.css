@@ -8,6 +8,7 @@
   --color-border: #dcdcdc;
   --color-error: #d93025;
   --color-blue: #5890a6;
+  --color-dark: #000000;
 
   /* Button / Textures */
   --gradient-wood: linear-gradient(to right, #fb8a02, #fd5201); /* Wood texture approximation */

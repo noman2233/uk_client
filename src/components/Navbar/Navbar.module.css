@@ -1,5 +1,5 @@
-.navbar {
-  background-color: var(--color-white);
+/* .navbar {
+  background-color: var(--color-dark);
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@
   align-items: center;
 }
 
-/* Logo */
+ 
 .logoContainer {
   display: flex;
   flex-direction: column;
@@ -50,17 +50,21 @@
   padding-top: 2px;
 }
 
-/* Nav Links */
+ 
 .navLinks {
   display: flex;
   list-style: none;
-  gap: 2.5rem;
+ 
   margin: 0;
+}
+.navItem {
+  width: 60px;
+  margin-left: 30px;
 }
 
 .link {
   text-decoration: none;
-  color:black;
+  color: var(--color-white);
   font-size: 1rem;
   transition: var(--transition);
   font-weight: 400;
@@ -69,9 +73,12 @@
 
 .link:hover {
   color: var(--color-accent);
+  background: var(--gradient-wood);
+  padding: 10px 15px;
+  border-radius: 7px;
 }
 
-/* Actions Area */
+ 
 .actions {
   display: flex;
   align-items: center;
@@ -83,7 +90,7 @@
   padding: 8px 30px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   color: white;
-  background: var( --gradient-wood);
+  background: var(--gradient-wood);
   box-shadow: 0 10px 28px rgba(106, 253, 46, 0.25),
     inset 0 0 0 1px rgba(255, 255, 255, 0.18);
   cursor: pointer;
@@ -94,9 +101,7 @@
   font-size: 15px;
 }
 
-/* .signInBtn:hover {
-  background: rgba(255, 255, 255, 0.1);
-} */
+ 
 
 .iconGroup {
   display: flex;
@@ -117,7 +122,7 @@
   position: relative;
   font-size: 1.1rem;
 }
-.hamburgerIcon{
+.hamburgerIcon {
   color: black;
 }
 
@@ -141,7 +146,7 @@
   cursor: pointer;
 }
 
-/* Mobile Responsive Logic */
+ 
 @media (max-width: 1024px) {
   .navLinks {
     position: absolute;
@@ -161,7 +166,7 @@
   }
 
   .signInBtn {
-    display: none; /* Hide desktop button */
+    display: none;  
   }
 
   .hamburger {
@@ -215,5 +220,202 @@
     width: 70px;
     height: 45px;
     object-fit: cover;
+  }
+} */
+
+.header {
+  width: 100%;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 20px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------- Logo ---------- */
+
+.logo img {
+  height: 60px;
+  width: 100px;
+  object-fit: cover;
+}
+
+/* ---------- Navigation ---------- */
+
+.nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.link {
+  color: #cfcfcf;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.25s;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+/* Active Home Button */
+
+.active {
+  background: var(--gradient-wood);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 18px rgba(231, 122, 44, 0.7);
+}
+
+/* ---------- Right Icons ---------- */
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconBtn {
+  position: relative;
+  background: #1a1a1a;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #4c4b4b;
+  padding: 12px;
+}
+.navbarIcon {
+  font-size: 24px;
+}
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  background: #ff3b3b;
+  color: #fff;
+  font-size: 11px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Mobile Menu Button ---------- */
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+.mobileMenuIcon{
+  color: white;
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ===================== */
+/* ================================================= */
+
+/* Large screens */
+@media (max-width: 1200px) {
+  .nav {
+    gap: 20px;
+  }
+  .active {
+    padding: 8px 18px;
+    border-radius: 6px;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 992px) {
+  .nav {
+    gap: 16px;
+  }
+  .link {
+    font-size: 15px;
+  }
+  .active {
+    padding: 7px 16px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 910px) {
+  .nav {
+    gap: 12px;
+  }
+  .link {
+    font-size: 13px;
+  }
+  .active {
+    padding: 6px 13px;
+    border-radius: 3px;
+  }
+}
+
+
+/* Small screens / Tablet */
+@media (max-width: 768px) {
+  .menuBtn {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #000;
+
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    gap: 24px;
+
+    transition: 0.3s;
+  }
+
+  .open {
+    left: 0;
+  }
+
+ 
+}
+
+/* Phone screens */
+@media (max-width: 480px) {
+  .container {
+    height: 70px;
+  }
+
+  .logo img {
+    height: 42px;
+  }
+
+  .iconBtn {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
   }
 }
