@@ -1,12 +1,13 @@
 :root {
   /* Colors */
-  --color-bg-main: #fd5201; /* Soft beige background */
-  --color-bg-secondary: #fb8a02; /* Soft beige background */
+  --color-bg-main: #ec5f09; /* Soft beige background */
+  --color-bg-secondary: #fa7907; /* Soft beige background */
   --color-primary-dark: #000000; /* Dark brown from the header/footer */
   --color-white: #ffffff;
   --color-text-muted: #666666;
   --color-border: #dcdcdc;
   --color-error: #d93025;
+  --color-blue: #5890a6;
 
   /* Button / Textures */
   --gradient-wood: linear-gradient(to right, #fb8a02, #fd5201); /* Wood texture approximation */

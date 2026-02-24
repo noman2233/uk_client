@@ -1,0 +1,64 @@
+.container {
+  display: grid;
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.overlay {
+  background: rgba(83, 83, 83, 0.4);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: "Jost";
+}
+
+.shopBtn {
+  background-color: var(--color-bg-main);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Jost";
+  font-weight: 400;
+}
+
+/* Responsive Queries */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

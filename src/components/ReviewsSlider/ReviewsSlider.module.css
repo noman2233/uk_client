@@ -1,6 +1,6 @@
 .section {
   padding: 80px 0;
-  background-color: #fff;
+  background-color: #f6f6f6;
   text-align: center;
 }
 
@@ -17,7 +17,7 @@
   margin-bottom: 50px;
   letter-spacing: 1px;
 }
- 
+
 .sliderContainer {
   max-width: 1240px;
   margin: 0 auto;

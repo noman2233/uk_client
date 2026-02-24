@@ -5,17 +5,19 @@ import HeroSection from "../../components/HeroSection/HeroSection";
 import AboutSection from "../../components/AboutSection/AboutSection";
 import CTASection from "../../components/CTASection/CTASection";
 import ReviewsSlider from "../../components/ReviewsSlider/ReviewsSlider";
-const Home = () => {
+import CategoryGrid from "../../components/CategoryGrid/CategoryGrid";
+ const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         {/* <Hero /> */}
         <HeroSection />
       </div>
+      <CategoryGrid/>
       <AboutSection />
-      <Contact />
-      <FAQPage />
       <ReviewsSlider />
+      <FAQPage />
+      <Contact />
       <CTASection />
     </div>
   );

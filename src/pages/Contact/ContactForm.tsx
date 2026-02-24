@@ -128,19 +128,19 @@ const ContactForm = () => {
             }) => (
               <Form className={styles.formGrid}>
                 <div className={styles.inputGroup}>
-                  <label>Full Name</label>
+                  {/* <label>Full Name</label> */}
                   <InputComponent
                     placeholder="Enter your full name"
                     value={values.username}
                     onChangeText={handleChange("username")}
                     onBlur={handleBlur("username")}
                     error={touched.username ? errors.username : ""}
-                    label="Name"
+                    label="Full Name"
                   />
                 </div>
 
                 <div className={styles.inputGroup}>
-                  <label>Email</label>
+                  {/* <label>Email</label> */}
                   <InputComponent
                     placeholder="Enter your email address"
                     value={values.email}
@@ -152,19 +152,18 @@ const ContactForm = () => {
                 </div>
 
                 <div className={styles.inputGroup}>
-                  <label>Phone No.</label>
+                  {/* <label>Phone No.</label> */}
                   <InputComponent
                     placeholder="Type your phone number"
                     value={values.number}
                     onChangeText={handleChange("number")}
                     onBlur={handleBlur("number")}
                     error={touched.number ? errors.number : ""}
-                    label="Number"
+                    label="Phone No."
                   />
                 </div>
 
                 <div className={styles.inputGroup}>
-                  <label>Subject</label>
                   <InputComponent
                     placeholder="Payment Problem"
                     value={values.subject}
@@ -176,7 +175,6 @@ const ContactForm = () => {
                 </div>
 
                 <div className={`${styles.inputGroup} ${styles.fullWidth}`}>
-                  <label>Your Message</label>
                   <InputComponent
                     isMultiline
                     placeholder="Type your message"
@@ -184,7 +182,7 @@ const ContactForm = () => {
                     onChangeText={handleChange("message")}
                     onBlur={handleBlur("message")}
                     error={touched.message ? errors.message : ""}
-                    label="Message"
+                    label="Your Message"
                   />
                 </div>
 

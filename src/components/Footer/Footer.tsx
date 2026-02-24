@@ -1,4 +1,4 @@
- import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 // Using arrays for the map method as requested
@@ -28,8 +28,10 @@ import {
   FaXTwitter,
   FaFacebookF,
   FaEbay,
+  FaPersonArrowUpFromLine,
 } from "react-icons/fa6"; // Use fa6 for the latest X logo
- import { FiGlobe, FiMail } from "react-icons/fi";
+import { FiGlobe, FiMail } from "react-icons/fi";
+import { BsArrowRight } from "react-icons/bs";
 
 const socialIcons = [
   {
@@ -79,8 +81,11 @@ const Footer = () => {
             <ul>
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.path}>
-                    <span>→</span> {link.name}
+                  <Link to={link.path} className={styles.link}>
+                    <span>
+                      <BsArrowRight className={styles.arrowForward} />
+                    </span>
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -94,7 +99,10 @@ const Footer = () => {
               {latestForSale.map((item, index) => (
                 <li key={index}>
                   <Link to={item.path}>
-                    <span>→</span> {item.name}
+                    <span>
+                      <BsArrowRight className={styles.arrowForward} />
+                    </span> 
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -106,13 +114,13 @@ const Footer = () => {
             <h3>Contact</h3>
             <address className={styles.address}>
               <div className={styles.addressIcon}>
-                <FiGlobe   className={styles.iconContact} />
+                <FiGlobe className={styles.iconContact} />
                 <p>
                   Office 1405 92 Castle Street, Belfast BT1 1HE Northern Ireland
                 </p>
               </div>
               <div className={styles.addressIcon}>
-                <FiMail   className={styles.iconMail} />
+                <FiMail className={styles.iconMail} />
                 <p className={styles.email}>contact@nidripfurniture.co.uk</p>
               </div>
             </address>

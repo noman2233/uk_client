@@ -6,7 +6,14 @@ import SideMenu from "../SideMenu/SideMenu";
 import { app_logo } from "../../utils/data";
 import CheckoutSidebar from "../CheckoutSidebar/CheckoutSidebar";
 import BottomNav from "../BottomNav/BottomNav";
-
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Products", path: "/products" },
+  { name: "Collections", path: "/collections" },
+  { name: "Blog", path: "/blog" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+];
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [openCheckout, setOpenCheckout] = useState<boolean>(false);
@@ -20,39 +27,14 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation Links */}
-          {/* <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}> */}
           <ul className={`${styles.navLinks}`}>
-            <li>
-              <Link to="/" className={styles.link}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/products" className={styles.link}>
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link to="collections" className={styles.link}>
-                Collections
-              </Link>
-            </li>{" "}
-            <li>
-              <Link to="/blog" className={styles.link}>
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className={styles.link}>
-                About
-              </Link>
-            </li>{" "}
-            <li>
-              <Link to="/contact" className={styles.link}>
-                Contact
-              </Link>
-            </li>
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <Link to={item.path} className={styles.link}>
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           {/* Right Side Actions */}

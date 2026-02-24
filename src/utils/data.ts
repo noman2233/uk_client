@@ -1,5 +1,5 @@
 export const app_logo =
-  "https://i.ibb.co/bMFhgy9L/download-4-artguru-removebg-preview.png";
+  "https://i.ibb.co/qYkhbhq7/Whats-App-Image-2026-02-24-at-1-52-46-PM-removebg-preview.png";
 // "https://i.ibb.co/nMKDbkKf/download-4-artguru.png";
 
 export const shop_email = "naoman@gmail.com";

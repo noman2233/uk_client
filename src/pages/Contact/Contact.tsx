@@ -1,4 +1,5 @@
- import LondonMap from "../../pagesComponents/Contact/Map/Map";
+ import InfoBar from "../../components/InfoBar/InfoBar";
+import LondonMap from "../../pagesComponents/Contact/Map/Map";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
@@ -6,6 +7,8 @@ const Contact = () => {
     <div>
       <ContactForm />
       <LondonMap />
+      <InfoBar/>
+
     </div>
   );
 };
