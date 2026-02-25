@@ -6,11 +6,14 @@ import styles from "./ReviewsSlider.module.css";
 import { TestimonialsData } from "../../utils/data";
 
 const Testimonials: React.FC = () => {
+  const slides = TestimonialsData;
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
     slidesToScroll: 1,
+    containScroll: false,
   });
+  console.log("Total slides:", slides.length);
 
   const scrollPrev = useCallback(() => {
     emblaApi?.scrollPrev();
@@ -19,6 +22,7 @@ const Testimonials: React.FC = () => {
   const scrollNext = useCallback(() => {
     emblaApi?.scrollNext();
   }, [emblaApi]);
+  console.log("Data:", TestimonialsData);
 
   return (
     <section className={styles.section}>
@@ -29,11 +33,10 @@ const Testimonials: React.FC = () => {
           <IoIosArrowBack />
         </button>
 
-        {/* Viewport */}
         <div className={styles.viewport} ref={emblaRef}>
           <div className={styles.track}>
-            {TestimonialsData.map((item) => (
-              <div key={item.id} className={styles.slide}>
+            {slides.map((item, index) => (
+              <div key={index} className={styles.slide}>
                 <div className={styles.card}>
                   <div className={styles.avatarWrapper}>
                     <div
@@ -58,7 +61,6 @@ const Testimonials: React.FC = () => {
                   </div>
 
                   <p className={styles.text}>{item.text}</p>
-                  {/* <button className={styles.readMore}>Read more</button> */}
                 </div>
               </div>
             ))}
