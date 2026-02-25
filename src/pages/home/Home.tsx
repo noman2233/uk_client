@@ -6,6 +6,7 @@ import AboutSection from "../../components/AboutSection/AboutSection";
 import CTASection from "../../components/CTASection/CTASection";
 import ReviewsSlider from "../../components/ReviewsSlider/ReviewsSlider";
 import CategoryGrid from "../../components/CategoryGrid/CategoryGrid";
+import LatestProducts from "../../components/LatestProducts/LatestProducts";
  const Home = () => {
   return (
     <div className={styles.container}>
@@ -14,6 +15,7 @@ import CategoryGrid from "../../components/CategoryGrid/CategoryGrid";
         <HeroSection />
       </div>
       <CategoryGrid/>
+      <LatestProducts/>
       <AboutSection />
       <ReviewsSlider />
       <FAQPage />
