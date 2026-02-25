@@ -10,7 +10,7 @@
 }
 
 .contentWrapper {
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
