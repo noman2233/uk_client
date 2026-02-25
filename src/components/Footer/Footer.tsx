@@ -62,88 +62,98 @@ const socialIcons = [
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.wrapper}>
-        <div className={styles.container}>
-          {/* Logo Section */}
-          <div className={styles.logoSection}>
-            <img
-              src="https://i.ibb.co/qYkhbhq7/Whats-App-Image-2026-02-24-at-1-52-46-PM-removebg-preview.png"
-              alt="NI Drip Central Furniture"
-              className={styles.logo}
-            />
-          </div>
+    <>
+      <footer className={styles.footer}>
+        <div className={styles.wrapper}>
+          <div className={styles.container}>
+            {/* Logo Section */}
+            <div className={styles.logoSection}>
+              <img
+                src="https://i.ibb.co/qYkhbhq7/Whats-App-Image-2026-02-24-at-1-52-46-PM-removebg-preview.png"
+                alt="NI Drip Central Furniture"
+                className={styles.logo}
+              />
+            </div>
 
-          {/* Quick Links */}
-          <div className={styles.column}>
-            <h3>Quick Links</h3>
-            <ul>
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <Link to={link.path} className={styles.link}>
-                    <span>
-                      <BsArrowRight className={styles.arrowForward} />
-                    </span>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Quick Links */}
+            <div className={styles.column}>
+              <h3>Quick Links</h3>
+              <ul>
+                {quickLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link to={link.path} className={styles.link}>
+                      <span>
+                        <BsArrowRight className={styles.arrowForward} />
+                      </span>
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Latest for Sale */}
-          <div className={styles.column}>
-            <h3>Latest for Sale</h3>
-            <ul>
-              {latestForSale.map((item, index) => (
-                <li key={index}>
-                  <Link to={item.path}>
-                    <span>
-                      <BsArrowRight className={styles.arrowForward} />
-                    </span> 
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Latest for Sale */}
+            <div className={styles.column}>
+              <h3>Latest for Sale</h3>
+              <ul>
+                {latestForSale.map((item, index) => (
+                  <li key={index}>
+                    <Link to={item.path}>
+                      <span>
+                        <BsArrowRight className={styles.arrowForward} />
+                      </span>
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Contact Section */}
-          <div className={styles.column}>
-            <h3>Contact</h3>
-            <address className={styles.address}>
-              <div className={styles.addressIcon}>
-                <FiGlobe className={styles.iconContact} />
-                <p>
-                  Office 1405 92 Castle Street, Belfast BT1 1HE Northern Ireland
-                </p>
+            {/* Contact Section */}
+            <div className={styles.column}>
+              <h3>Contact</h3>
+              <address className={styles.address}>
+                <div className={styles.addressIcon}>
+                  <FiGlobe className={styles.iconContact} />
+                  <p>
+                    Office 1405 92 Castle Street, Belfast BT1 1HE Northern
+                    Ireland
+                  </p>
+                </div>
+                <div className={styles.addressIcon}>
+                  <FiMail className={styles.iconMail} />
+                  <p className={styles.email}>contact@nidripfurniture.co.uk</p>
+                </div>
+              </address>
+
+              <div className={styles.socialGrid}>
+                {/* You can replace these placeholders with actual FontAwesome or SVG icons */}
+                {socialIcons.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.socialBox}
+                    aria-label={social.name}
+                  >
+                    {/* Rendering the icon component directly from data */}
+                    <span className={styles.iconFooter}>{social.icon}</span>
+                  </a>
+                ))}
               </div>
-              <div className={styles.addressIcon}>
-                <FiMail className={styles.iconMail} />
-                <p className={styles.email}>contact@nidripfurniture.co.uk</p>
-              </div>
-            </address>
-
-            <div className={styles.socialGrid}>
-              {/* You can replace these placeholders with actual FontAwesome or SVG icons */}
-              {socialIcons.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.socialBox}
-                  aria-label={social.name}
-                >
-                  {/* Rendering the icon component directly from data */}
-                  <span className={styles.iconFooter}>{social.icon}</span>
-                </a>
-              ))}
             </div>
           </div>
         </div>
+      </footer>
+      <div className={styles.bottomSection}>
+        <p>© 2026 Graphy. All rights reserved.</p>
+        <div className={styles.legalLinks}>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <Link to="/terms">Terms of Service</Link>
+        </div>
       </div>
-    </footer>
+    </>
   );
 };
 

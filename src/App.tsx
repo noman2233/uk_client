@@ -6,8 +6,7 @@ import Footer from "./components/Footer/Footer";
 import ResetPassword from "./pages/auth/ResetPassword";
 import ProductDeatil from "./pages/ProductDetail/ProductDetail";
 import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
-import AnnouncementBar from "./components/AnnouncementBar/AnnouncementBar";
-import Contact from "./pages/Contact/Contact";
+ import Contact from "./pages/Contact/Contact";
 import AboutUs from "./pages/About/About";
 import TermsAndConditions from "./pages/LegalPges/TermsAndConditions";
 import PrivacyPolicy from "./pages/LegalPges/PrivacyPolicy";
@@ -22,7 +21,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop/>
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <Navbar />
       {/* <BottomNav /> */}
       <main>

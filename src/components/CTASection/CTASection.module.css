@@ -51,7 +51,7 @@
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .orderButton {
@@ -76,10 +76,14 @@
 /* --- Responsive Breakpoints --- */
 
 /* Tablets (Medium) */
-@media (max-width: 768px) {
-  .ctaContainer {
-    height: 400px;
+@media (max-width: 850px) {
+  .container {
+    width: 90%;
   }
+}
+
+/* Tablets (Medium) */
+@media (max-width: 768px) {
   .title {
     font-size: 2.2rem;
   }
@@ -91,8 +95,8 @@
 /* Mobile (Small) */
 @media (max-width: 480px) {
   .ctaContainer {
-    height: auto;
-    padding: 60px 0;
+    /* height: auto; */
+    padding: 30px 0;
   }
   .title {
     font-size: 1.8rem;

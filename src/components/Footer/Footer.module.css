@@ -168,6 +168,33 @@
   background-color: #186900; /* TikTok Black */
 }
 
+/* Bottom Section */
+.bottomSection {
+  padding-top: 30px;
+  border-top: 1px solid #868484;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 0.85rem;
+  background-color: black;
+  padding: 20px 10px;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.legalLinks a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.legalLinks a:hover {
+  text-decoration: underline;
+}
+
 /* Responsiveness */
 
 /* Tablets (Medium) */
@@ -177,10 +204,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .bottomSection {
+    flex-direction: column-reverse;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
+
 /* Phones (Small) */
 @media (max-width: 600px) {
   .footer {
-    padding: 40px 15px;
+    /* padding: 40px 15px; */
   }
   .container {
     flex-direction: column;
@@ -195,5 +230,9 @@
   }
   .column {
     flex: 2;
+  }
+
+  .container {
+    padding: 0px 0px 0px 30px;
   }
 }
