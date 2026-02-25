@@ -1,13 +1,10 @@
 export const app_logo =
-  "https://i.ibb.co/qYkhbhq7/Whats-App-Image-2026-02-24-at-1-52-46-PM-removebg-preview.png";
+  "https://i.ibb.co/S7dVFzsv/Gemini-Generated-Image-xra4ngxra4ngxra4-removebg-preview.png";
 // "https://i.ibb.co/nMKDbkKf/download-4-artguru.png";
 export const dark_logo =
-  "https://i.ibb.co/qYkhbhq7/Whats-App-Image-2026-02-24-at-1-52-46-PM-removebg-preview.png";
+  "https://i.ibb.co/Xfp93Tfw/1772039650757-removebg-preview.png";
 // "https://i.ibb.co/nMKDbkKf/download-4-artguru.png";
-export const colored_logo =
-  "https://i.ibb.co/Y4yzkz8Q/Whats-App-Image-2026-02-25-at-1-09-47-AM.jpg";
-// "https://i.ibb.co/nMKDbkKf/download-4-artguru.png";
-
+ 
 export const shop_email = "naoman@gmail.com";
 export const shop_phone = "03246773140";
 export const shop_address = "Lahore, Punjab, Pakistan";

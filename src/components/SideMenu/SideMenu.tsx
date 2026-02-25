@@ -5,7 +5,7 @@ import styles from "./newsidemenu.module.css";
 import { motion } from "framer-motion";
 import { IoIosArrowForward } from "react-icons/io";
 import { CgLogIn } from "react-icons/cg";
-import { colored_logo } from "../../utils/data";
+import {  dark_logo } from "../../utils/data";
 
 interface SideMenuProps {
   isMenuOpen: boolean;
@@ -41,7 +41,7 @@ const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
         <div className={styles.header}>
           <div className={styles.userInfo}>
             <div className={styles.avatarWrapper}>
-              <img src={colored_logo} alt="User Avatar" className={styles.avatar} />
+              <img src={dark_logo} alt="User Avatar" className={styles.avatar} />
             </div>
             {/* <div className={styles.userText}>
               <span className={styles.greeting}>Hello,</span>

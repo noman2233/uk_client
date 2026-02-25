@@ -71,7 +71,7 @@ const Footer = () => {
             {/* Logo Section */}
             <div className={styles.logoSection}>
               <img
-                src="https://i.ibb.co/qYkhbhq7/Whats-App-Image-2026-02-24-at-1-52-46-PM-removebg-preview.png"
+                src="https://i.ibb.co/Xfp93Tfw/1772039650757-removebg-preview.png"
                 alt="NI Drip Central Furniture"
                 className={styles.logo}
               />
@@ -139,8 +139,7 @@ const Footer = () => {
                     className={styles.socialBox}
                     aria-label={social.name}
                   >
-                    {/* Rendering the icon component directly from data */}
-                    <span className={styles.iconFooter}>{social.icon}</span>
+                     <span className={styles.iconFooter}>{social.icon}</span>
                   </a>
                 ))}
               </div>
@@ -153,10 +152,7 @@ const Footer = () => {
           Copyright @ {date} <span>NI DRIP CENTRAL FURNITURE</span> | All Rights
           Reserved.
         </p>
-        {/* <div className={styles.legalLinks}>
-          <Link to="/privacy-policy">Privacy Policy</Link>
-          <Link to="/terms">Terms of Service</Link>
-        </div> */}
+     
       </div>
     </>
   );
