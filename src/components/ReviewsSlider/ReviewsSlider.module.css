@@ -1,15 +1,9 @@
-.section {
+/* .section {
   padding: 80px 0;
   background-color: #f6f6f6;
   text-align: center;
 }
-
-/* .slick-slide > div {
-  margin: 0 20px;
-}
-.slick-list {
-  margin: 0 -10px;
-} */
+ 
 
 .title {
   font-size: 1.8rem;
@@ -18,14 +12,7 @@
   letter-spacing: 1px;
 }
 
-/* .sliderContainer {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0 20px;  
-} */
+ 
  .sliderContainer {
     display: flex;
   align-items: center;
@@ -35,11 +22,10 @@
   position: relative;
 }
 
-/* ─── Viewport & track ─────────────────────────────────────────────────────── */
-.viewport {
+ .viewport {
   overflow: hidden;
-  flex: 1; /* fill all space between the two arrow buttons */
-  min-width: 0; /* prevent flex blowout */
+  flex: 1; 
+  min-width: 0; 
 }
 
 .track {
@@ -48,10 +34,8 @@
   will-change: transform;
 }
 
-/* ─── Cards ────────────────────────────────────────────────────────────────── */
-.cardWrapper {
-  /* flex-basis is set inline (100 / itemsToShow %) */
-  flex-shrink: 0;
+ .cardWrapper {
+   flex-shrink: 0;
   box-sizing: border-box;
   padding: 0 15px;
 }
@@ -132,11 +116,7 @@
   margin-top: 5px;
 }
 
-/* ─── Arrow buttons ────────────────────────────────────────────────────────── */
-/*
-  Arrows are flex siblings of .viewport — no absolute positioning needed.
-  flex-shrink:0 keeps them at a fixed size regardless of viewport width.
-*/
+ 
 .navBtn {
   flex-shrink: 0;
   background: transparent;
@@ -156,17 +136,15 @@
   color: #333;
 }
 
-/* .left / .right no longer need position values — kept for clarity only */
-.left {
-  order: -1; /* always first */
+ .left {
+  order: -1;  
 }
 
 .right {
-  order: 1; /* always last */
+  order: 1; 
 }
 
-/* ─── Responsive ───────────────────────────────────────────────────────────── */
-@media (max-width: 600px) {
+ @media (max-width: 600px) {
   .sliderContainer {
     padding: 0 10px;
     gap: 4px;
@@ -175,4 +153,126 @@
   .navBtn {
     font-size: 2.2rem;
   }
+} */
+
+
+.section {
+  padding: 80px 0;
+  background: #f6f6f6;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Embla viewport */
+.viewport {
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Embla track */
+.track {
+  display: flex;
+}
+
+/* Each slide */
+.slide {
+  flex: 0 0 25%; /* Desktop = 4 slides */
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Responsive slides */
+@media (max-width: 1164px) {
+  .slide {
+    flex: 0 0 33.33%;
+  }
+}
+
+@media (max-width: 800px) {
+  .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .slide {
+    flex: 0 0 100%;
+  }
+}
+
+/* Card styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatarWrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.googleIcon {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+  color: #4285f4;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 15px;
+}
+
+.text {
+  max-width: 260px;
+  text-align: center;
+}
+
+/* Arrows */
+.navBtn {
+  background: transparent;
+  border: none;
+  font-size: 2.8rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.navBtn:hover {
+  color: #333;
 }

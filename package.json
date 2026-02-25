@@ -12,6 +12,7 @@
   "dependencies": {
     "emailjs": "^5.0.0",
     "emailjs-com": "^3.2.0",
+    "embla-carousel-react": "^8.6.0",
     "formik": "^2.4.9",
     "framer-motion": "^12.34.3",
     "leaflet": "^1.9.4",
@@ -21,7 +22,6 @@
     "react-leaflet": "^5.0.0",
     "react-modal": "^3.16.3",
     "react-router-dom": "^7.13.0",
-    "react-slick": "^0.31.0",
     "react-toastify": "^11.0.5",
     "slick-carousel": "^1.8.1",
     "yup": "^1.7.1"
