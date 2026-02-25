@@ -61,6 +61,8 @@ const socialIcons = [
 ];
 
 const Footer = () => {
+  const date = new Date().getFullYear();
+
   return (
     <>
       <footer className={styles.footer}>
@@ -147,11 +149,14 @@ const Footer = () => {
         </div>
       </footer>
       <div className={styles.bottomSection}>
-        <p>© 2026 Graphy. All rights reserved.</p>
-        <div className={styles.legalLinks}>
+        <p>
+          Copyright @ {date} <span>NI DRIP CENTRAL FURNITURE</span> | All Rights
+          Reserved.
+        </p>
+        {/* <div className={styles.legalLinks}>
           <Link to="/privacy-policy">Privacy Policy</Link>
           <Link to="/terms">Terms of Service</Link>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -3,11 +3,8 @@
     center center no-repeat;
   background-size: cover;
   background-position: center;
-
   color: #ffffff;
-
-  font-family: "Inter", sans-serif; /* Replace with your primary font */
-  /* background-color: red; */
+  font-family: "Inter", sans-serif;  
 }
 .wrapper {
   width: 100%;
@@ -113,11 +110,11 @@
   align-items: center;
   width: 42px;
   height: 42px;
-  background-color: #3b3b3b; /* The base dark grey from your image */
+  background-color: #3b3b3b;  
   border-radius: 8px;
   transition: all 0.3s ease;
   text-decoration: none;
-  overflow: hidden; /* Ensures background colors don't bleed */
+  overflow: hidden;  
 }
 
 .socialBox:hover {
@@ -131,15 +128,11 @@
   justify-content: center;
 }
 
-/* HOVER EFFECTS - Pixel Perfect matching */
-.socialBox:hover {
+ .socialBox:hover {
   transform: translateY(-3px);
   filter: brightness(1.2);
 }
-
-/* Targeting by index using the map order:
-   1: TikTok, 2: Instagram, 3: X, 4: Facebook, 5: eBay
-*/
+ 
 
 /* Instagram Gradient */
 .socialBox:nth-child(2) {
@@ -160,12 +153,11 @@
   background-color: #1877f2;
 }
 
-/* X (Twitter) and TikTok usually stay dark, but you can add specific ones: */
-.socialBox:nth-child(1) {
-  background-color: #000000; /* TikTok Black */
+ .socialBox:nth-child(1) {
+  background-color: #000000;  
 }
 .socialBox:nth-child(5) {
-  background-color: #186900; /* TikTok Black */
+  background-color: #186900;  
 }
 
 /* Bottom Section */
@@ -173,12 +165,18 @@
   padding-top: 30px;
   border-top: 1px solid #868484;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   color: white;
   font-size: 0.85rem;
   background-color: black;
   padding: 20px 10px;
+}
+
+.bottomSection p span{
+  font-weight: 500;
+  
+
 }
 
 .legalLinks {
