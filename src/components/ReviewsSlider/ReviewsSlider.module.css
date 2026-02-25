@@ -4,12 +4,12 @@
   text-align: center;
 }
 
-.slick-slide > div {
+/* .slick-slide > div {
   margin: 0 20px;
 }
 .slick-list {
   margin: 0 -10px;
-}
+} */
 
 .title {
   font-size: 1.8rem;
@@ -18,13 +18,19 @@
   letter-spacing: 1px;
 }
 
-.sliderContainer {
+/* .sliderContainer {
   max-width: 1240px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0 20px; /* just page-edge breathing room */
+  padding: 0 20px;  
+} */
+ .sliderContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
 }
 
 /* ─── Viewport & track ─────────────────────────────────────────────────────── */

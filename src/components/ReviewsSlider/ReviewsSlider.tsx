@@ -5,43 +5,78 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TestimonialsData } from "../../utils/data";
-
-
- 
+import {  useState } from "react";
 
 const Testimonials: React.FC = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1164,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-    ],
-  };
+  const [sliderKey, setSliderKey] = useState<number>(0);
+  console.log("Rendering Testimonials with sliderKey:", setSliderKey);
 
+  // const settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   autoplay: true,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 2,
+  //   initialSlide: 0,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1164,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         infinite: true,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 800,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 2,
+  //         initialSlide: 2,
+  //       },
+  //     },
+  //   ],
+  // };
+const settings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1164,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
   const handleErrorImage = (data: React.SyntheticEvent<HTMLDivElement>) => {
     console.log(data);
   };
+
+  // Force the slider to reinitialize on mount or window resize
+
+ 
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>WHAT OUR CUSTOMERS SAY</h2>
@@ -62,7 +97,7 @@ const Testimonials: React.FC = () => {
             onError={handleErrorImage}
             // style={{ transform: `translateX(-${translateX}%)` }}
           >
-            <Slider {...settings}>
+            <Slider key={sliderKey} {...settings}>
               {TestimonialsData.map((item) => (
                 <div
                   key={item.id}
