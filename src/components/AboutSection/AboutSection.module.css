@@ -55,6 +55,11 @@
 /* Responsive Adjustments */
 
 /* Tablets (Medium) */
+@media (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+}
 @media (max-width: 768px) {
   .heading {
     font-size: 1.3rem;

@@ -27,6 +27,8 @@
   padding: 0 20px;  
 } */
  .sliderContainer {
+    display: flex;
+  align-items: center;
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
