@@ -62,7 +62,7 @@ const LatestProducts: React.FC = () => {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="shop">
       {/* Header with Title and Navs */}
       <div className={styles.header}>
         <button

@@ -1,10 +1,8 @@
 export const app_logo =
   "https://i.ibb.co/S7dVFzsv/Gemini-Generated-Image-xra4ngxra4ngxra4-removebg-preview.png";
-// "https://i.ibb.co/nMKDbkKf/download-4-artguru.png";
 export const dark_logo =
   "https://i.ibb.co/Xfp93Tfw/1772039650757-removebg-preview.png";
-// "https://i.ibb.co/nMKDbkKf/download-4-artguru.png";
- 
+
 export const shop_email = "naoman@gmail.com";
 export const shop_phone = "03246773140";
 export const shop_address = "Lahore, Punjab, Pakistan";
@@ -19,7 +17,69 @@ export const shop_twitter =
   "https://x.com/AbdulMaalik140?t=Q7cxcoqBqUGH06vHlNuGSQ&s=09";
 export const contact_para = `  Are you ready to take your project to the next level? Whether
               you're looking for a new website, a web application, or simply
-              need advice.`;
+      need advice.`;
+
+
+
+      import { IoIosArrowForward } from "react-icons/io";
+
+export const MENU_ITEMS = [
+  {
+    label: "Home",
+    id: "home",
+    path: "/",
+    icon: IoIosArrowForward,
+  },
+  {
+    label: "Products",
+    id: "products",
+    path: "/",
+    icon: IoIosArrowForward,
+  },
+  {
+    label: "Shop",
+    id: "shop",
+    path: "/",
+    icon: IoIosArrowForward,
+  },
+  {
+    label: "About",
+    id: "about",
+    path: "/",
+    icon: IoIosArrowForward,
+  },
+  {
+    label: "Contact",
+    id: "contact",
+    path: "/",
+    icon: IoIosArrowForward,
+  },
+  {
+    label: "FAQs",
+    id: "faqs",
+    path: "/",
+    icon: IoIosArrowForward,
+  },
+  {
+    label: "Testimonials",
+    id: "testimonials",
+    path: "/",
+    icon: IoIosArrowForward,
+  },
+  {
+    label: "Login",
+    id: "login",
+    path: "/",
+    icon: IoIosArrowForward,
+  },
+  {
+    label: "SignUp",
+    id: "signup",
+    path: "/",
+    icon: IoIosArrowForward,
+  },
+];
+
 
 export const TERMS_DATA = [
   {

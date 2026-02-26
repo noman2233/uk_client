@@ -25,7 +25,7 @@ const Testimonials: React.FC = () => {
   console.log("Data:", TestimonialsData);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="testimonials">
       <h2 className={styles.title}>WHAT OUR CUSTOMERS SAY</h2>
 
       <div className={styles.sliderContainer}>

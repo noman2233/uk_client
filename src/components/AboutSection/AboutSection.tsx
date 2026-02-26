@@ -2,7 +2,7 @@
 
 const AboutSection = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="about">
       <div className={styles.content}>
         <h2 className={styles.heading}>
           CELEBRATING OVER 15 YEARS IN BUSINESS

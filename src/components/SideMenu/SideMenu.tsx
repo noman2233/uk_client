@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { FiX } from "react-icons/fi";
 import styles from "./newsidemenu.module.css";
 import { motion } from "framer-motion";
-import { IoIosArrowForward } from "react-icons/io";
 import { CgLogIn } from "react-icons/cg";
-import {  dark_logo } from "../../utils/data";
+import { dark_logo, MENU_ITEMS } from "../../utils/data";
+import { scrollToSection } from "../../scroll";
 
 interface SideMenuProps {
   isMenuOpen: boolean;
@@ -13,19 +13,6 @@ interface SideMenuProps {
   userName?: string;
 }
 const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
-  // const menuItems = [
-
-  const menuItemsNew = [
-    { icon: <IoIosArrowForward />, label: "Home", path: "/" },
-    { icon: <IoIosArrowForward />, label: "Shop", path: "/" },
-    { icon: <IoIosArrowForward />, label: "Products", path: "/" },
-    { icon: <IoIosArrowForward />, label: "Contact", path: "/" },
-    { icon: <IoIosArrowForward />, label: "FAQ's", path: "/" },
-    { icon: <IoIosArrowForward />, label: "About", path: "/" },
-    { icon: <IoIosArrowForward />, label: "Login", path: "/" },
-    { icon: <IoIosArrowForward />, label: "SignUp", path: "/" },
-  ];
-
   return (
     <>
       {/* Overlay */}
@@ -41,12 +28,12 @@ const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
         <div className={styles.header}>
           <div className={styles.userInfo}>
             <div className={styles.avatarWrapper}>
-              <img src={dark_logo} alt="User Avatar" className={styles.avatar} />
+              <img
+                src={dark_logo}
+                alt="User Avatar"
+                className={styles.avatar}
+              />
             </div>
-            {/* <div className={styles.userText}>
-              <span className={styles.greeting}>Hello,</span>
-              <h3 className={styles.name}>{userName}</h3>
-            </div> */}
           </div>
           <button
             className={styles.closeBtn}
@@ -59,16 +46,21 @@ const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
         {/* Navigation */}
         <nav className={styles.navLinks}>
-          {menuItemsNew.map((item) => (
+          {MENU_ITEMS.map((item) => (
             <Link
               key={item.label}
               to={item.path}
               className={styles.navItem}
-              onClick={() => setIsMenuOpen(false)}
+              // onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.id);
+                setIsMenuOpen(false);
+              }}
             >
               <div className={styles.menuBox}>
                 <span className={styles.label}>{item.label}</span>
-                <span className={styles.icon}>{item.icon}</span>
+                <span className={styles.icon}>{<item.icon />}</span>
               </div>
             </Link>
           ))}
@@ -78,22 +70,12 @@ const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 className={styles.logoutBtn}
                 onClick={() => console.log("Logout and clear JWT")}
               >
-                <span>Login</span>
+                Login
                 <CgLogIn />
               </button>
             </Link>
           </div>
         </nav>
-
-        {/* <div className={styles.footer}>
-          <button
-            className={styles.logoutBtn}
-            onClick={() => console.log("Logout and clear JWT")}
-          >
-            <FiLogOut />
-            <span>Logout</span>
-          </button>
-        </div> */}
       </motion.div>
     </>
   );

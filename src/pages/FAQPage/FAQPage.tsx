@@ -5,7 +5,7 @@ import Header from "../../components/Header/Header";
 
 const FAQPage = () => {
   return (
-    <section className={styles.faqWrapper}>
+    <section className={styles.faqWrapper} id="faqs">
       <Header title="FAQ's" description="" />
       {/* <Header */}
       <div className={styles.faqGrid}>
