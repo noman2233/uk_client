@@ -3,7 +3,7 @@ import styles from "./InputComponent.module.css";
 
 interface InputProps {
   label: string;
-  placeholder: string;
+  placeholder?: string;
   value: string;
   onChangeText: (e: React.ChangeEvent<any>) => void;
   onBlur: (e: any) => void;

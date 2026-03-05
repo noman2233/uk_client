@@ -1,181 +1,518 @@
-.pageWrapper {
-  background-color: #e4e4e4;
+/* .mainContainer {
+  background-color: #fcfdfe;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  
-}
-.heading{
-  text-align: center;
-  font-weight: 500;
-  font-size: 20px;
-  font-family: 'Jost';
-  padding-bottom: 30px;
+  padding: 40px 0;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr; /* Desktop Side-by-Side */
-  max-width: 1100px;
+.pageContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+ 
+.stepperWrapper {
+  position: relative;
+  margin-bottom: 60px;
   width: 100%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  display: block;
+} 
+.stepperLineBackground {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #eef1f5;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.stepperLineProgress {
+  height: 100%;
+  background: #004aad;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stepsContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.stepCircle {
+  width: 48px;
+  height: 48px;
   background: white;
-  margin: 60px 0px;
-}
-.sectionHeading {
-  font-weight: 500;
-  font-size: 16px;
-  font-family: "Jost";
-  padding-bottom: 10px;
-}
-.formColumn {
-  padding: 40px;
-  border-right: 1px solid #e1e1e1;
-}
-
-.summaryColumn {
-  padding: 40px;
-  background-color: #fafafa;
-}
-
-.row {
-  display: flex;
-  gap: 15px;
-}
-
-.cardBox {
-  border: 1px solid #e1e1e1;
-  padding: 20px;
-  border-radius: 4px;
-  background: #fff;
-}
-
-.payBtn {
-  width: 100%;
-  background: var(--gradient-wood);
-  color: white;
-  padding: 14px 80px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  margin-top: 20px;
-}
-.productRow {
+  border: 2px solid #eef1f5;
+  border-radius: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  color: #b0b8c1;
+  transition: all 0.3s ease;
+}
+
+.activeStep {
+  background: #004aad;
+  border-color: #004aad;
+  color: white;
+  box-shadow: 0 0 0 4px rgba(0, 74, 173, 0.1);
+}
+
+ 
+.card {
+  background: white;
+  border: 1px solid #f0f2f5;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.sectionLabel {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 25px 0 15px;
+  color: #333;
+}
+
+ .selectionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.selectionCard {
+  border: 1.5px solid #edf2f7;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cardActive {
+  border-color: #004aad;
+  background-color: #f8fbff;
+}
+
+.selectionText strong { display: block; font-size: 14px; }
+.selectionText span { font-size: 12px; color: #718096; }
+
+.courierRow {
+  display: flex;
+  gap: 12px;
+}
+
+.courierCard {
+  flex: 1;
+  border: 1.5px solid #edf2f7;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.courierLogo {
+  max-height: 24px;
+  object-fit: contain;
+}
+
+.cardFooter {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #f7fafc;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.footerRight {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.securityNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #718096;
+  font-size: 13px;
+}
+
+.primaryBtn {
+  background: #004aad;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #718096;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .grid, .selectionGrid { grid-template-columns: 1fr; }
+  .courierRow { flex-wrap: wrap; }
+  .cardFooter { flex-direction: column-reverse; gap: 20px; }
+} */
+
+.mainContainer {
+  background-color: #fcfdfe;
+  min-height: 100vh;
+  padding: 40px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.pageContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Stepper Logic */
+.stepperWrapper {
+  position: relative;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.stepperLineBackground {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #eef1f5;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.stepperLineProgress {
+  height: 100%;
+  background: #004aad;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stepsContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.stepCircle {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: 2px solid #eef1f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b0b8c1;
+  transition: all 0.3s ease;
+}
+
+.activeStep {
+  background: #004aad;
+  border-color: #004aad;
+  color: white;
+}
+
+/* Form Styles */
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a202c;
+}
+.subtitle {
+  text-align: center;
+  color: #718096;
+  margin: 8px 0 40px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #f0f2f5;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+/* --- GRID FOR BILLING --- */
+.billingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.fullWidthRow {
   margin-bottom: 20px;
 }
-.imgBadge {
-  padding: 10px;
-  border-radius: 3px;
-  background-color: rgb(243, 243, 243);
-  border: 1px solid rgb(215, 213, 213);
+
+/* Step 2 Styles */
+.sectionLabel {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 30px 0 15px;
+  color: #2d3748;
+}
+
+.selectionCard {
+  border: 1.5px solid #edf2f7;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.cardActive {
+  border-color: #004aad;
+  background-color: #f8fbff;
+}
+
+/* Step 3 Placeholder */
+.paymentPlaceholder {
+  padding: 60px 0;
+  text-align: center;
+  border: 2px dashed #e2e8f0;
+  border-radius: 12px;
+}
+
+.placeholderText {
+  font-size: 24px;
+  font-weight: 700;
+  color: #004aad;
+}
+
+/* Footer */
+.cardFooter {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #f7fafc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerRight {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 24px;
 }
-.checkout_image {
-  width: 30px;
-  height: 30px;
+.securityNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #718096;
+  font-size: 13px;
+}
+
+.primaryBtn {
+  background: #004aad;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #718096;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.courierRow {
+  display: flex;
+  gap: 12px;
+}
+
+.courierCard {
+  flex: 1;
+  border: 1.5px solid #edf2f7;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.courierLogo {
+  /* max-height: 24px; */
+  width: 40px;
+  height: 40px;
   object-fit: cover;
 }
 
-.totalRow {
+.cardFooter {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #f7fafc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerRight {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 20px 0px;
-  font-family: "Jost";
+  gap: 24px;
 }
-.finalAmount {
-  font-weight: 500;
-  font-size: 16px;
-  font-family: "Jost";
-}
-.finalAmount p {
-  padding-right: 20px;
-}
-.totalHeading {
-  font-weight: 500;
-  font-size: 16px;
-  font-family: "Jost";
-}
-.giftBox{
+
+.securityNote {
   display: flex;
   align-items: center;
+  gap: 8px;
+  color: #718096;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .billingGrid {
+    grid-template-columns: 1fr;
+  }
+  .cardFooter {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid,
+  .selectionGrid {
+    grid-template-columns: 1fr;
+  }
+  .courierRow {
+    flex-wrap: wrap;
+  }
+  .cardFooter {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+
+/* step 3 css  */
+
+.paymentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.paymentMethodsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.paymentOption {
+  border: 1.5px solid #edf2f7;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.giftButton{
-  padding: 5px 20px;
-  background-color: rgb(231, 231, 231);
-  border: none;
-  border-radius: 7px;
-  color: black;
-  font-family: 'Jost';
-  font-weight: 500;
-  font-size: 20px;
-  border: 2px solid rgb(184, 183, 183);
 
-}
-.giftInput{
-  padding: 13px 8px ;
-  border: 2px solid rgb(201, 200, 200);
-  border-radius: 5px;
-  width: 65%;
-  background-color: white;
-    font-family: 'Jost';
+.optionLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-weight: 500;
   font-size: 14px;
-
-
+}
+.methodIcon {
+  /* height: 20px;
+   */
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
-.shippingHeading {
-  font-weight: 400;
-  font-size: 14px;
-  font-family: "Jost";
+.cardDetailContainer {
+  margin-top: 5px;
 }
-.finalAmount span {
-  padding-right: 10px;
-  font-weight: 400;
-  font-size: 12px;
-  font-family: "Jost";
+.fullWidthInput {
+  margin-bottom: 20px;
 }
 
-.shippingHeading span {
-  padding-right: 10px;
-  font-weight: 400;
-  font-size: 12px;
-  font-family: "Jost";
-}
-/* RESPONSIVENESS */
-
-/* Tablet & Smaller Desktop */
-@media (max-width: 1024px) {
-  .container {
-    grid-template-columns: 1fr; /* Stacked */
-  }
-  .formColumn {
-    order: 2; /* Form below summary on mobile/tablet */
-    border-right: none;
-  }
-  .summaryColumn {
-    order: 1;
-    border-bottom: 1px solid #e1e1e1;
-  }
+.paymentFooterMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
-/* Mobile Devices */
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #4a5568;
+}
+.securityNoteSmall {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #718096;
+  font-size: 11px;
+}
+
 @media (max-width: 600px) {
-  .formColumn,
-  .summaryColumn {
-    padding: 20px;
-  }
-  .row {
-    flex-direction: column; /* Input rows stack on small screens */
-    gap: 0;
+  .paymentFooterMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
   }
 }
