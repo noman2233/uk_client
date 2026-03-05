@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./ShoppingCart.module.css";
 import { FiMinus, FiPlus, FiTrash2 } from "react-icons/fi";
  import { MdDiscount } from "react-icons/md";
+import OrderSummary from "./OrderSummary";
 // types.ts
 interface CartProduct {
   id: string;
@@ -15,6 +16,8 @@ interface CartProduct {
   inStock: boolean;
   tag?: string;
 }
+
+
 
 interface ServiceFeature {
   id: number;
@@ -102,6 +105,7 @@ const ShoppingCart: React.FC = () => {
   };
 
   return (
+
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>5 Items Selected</h1>
@@ -219,6 +223,7 @@ const ShoppingCart: React.FC = () => {
           </div>
         ))}
       </div>
+      <OrderSummary/>
     </div>
   );
 };

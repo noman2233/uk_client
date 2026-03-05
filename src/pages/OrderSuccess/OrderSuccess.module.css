@@ -1,197 +1,95 @@
-.container {
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #ffffff;
-  position: relative;
-  overflow: hidden; /* Prevents threads from causing scrollbars */
-  padding: 40px;
-  font-family: "Inter", sans-serif; /* A bold Sans-Serif from your reference image */
+  padding: 20px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Background Thread styling */
-.threadSvg {
-  position: absolute;
-  pointer-events: none; /* User cannot click threads */
-  z-index: 1;
-}
-
-.threadPath {
-  fill: transparent;
-  stroke: #004aad; /* Dark blue matching your brand */
-  stroke-width: 3;
-}
-
-.dot {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background-color: #004aad;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.contentCard {
-  position: relative;
-  z-index: 2; /* Sits above threads */
-  text-align: center;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 600px;
   width: 100%;
+  max-width: 800px; /* Responsive container cap */
+  text-align: center;
 }
 
-/* --- The Jagged Success Badge --- */
-.badgeWrapper {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
+.imageSection {
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
-.outerCircle {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  background-color: rgba(43, 87, 151, 0.04); /* Very faint light blue halo */
-  border-radius: 50%;
-  z-index: 3;
-}
-
-.jaggedBadge {
-  width: 130px;
-  height: 130px;
-  background-color: #2b5797; /* Blue from image */
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 4;
-  box-shadow: 0 10px 40px rgba(43, 87, 151, 0.4);
-
-  /* Creates the specific jagged edge pattern seen in your image */
-  clip-path: polygon(
-    50% 0%,
-    61% 10%,
-    75% 10%,
-    79% 23%,
-    91% 29%,
-    89% 43%,
-    98% 54%,
-    90% 66%,
-    93% 80%,
-    79% 84%,
-    73% 97%,
-    60% 92%,
-    50% 100%,
-    39% 92%,
-    26% 97%,
-    21% 84%,
-    6% 80%,
-    10% 66%,
-    1% 54%,
-    10% 43%,
-    8% 29%,
-    21% 23%,
-    25% 10%,
-    38% 10%
-  );
-}
-
-.checkIcon {
-  stroke-width: 2.5;
-}
-
-/* --- Text Group & Responsiveness --- */
-.textGroup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
+.heroImage {
+  width: 100%;
+  height: auto;
+  max-width: 500px; /* Prevents image from getting too huge on 4k screens */
+  object-fit: contain;
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 800;
-  color: #1a1a1a;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.3;
-  text-align: center;
-}
-
-.trackButton {
-  background: linear-gradient(90deg, #043a80, #2b5797);
-  color: white;
-  padding: 16px 50px;
-  border-radius: 50px;
-  border: none;
+  color: #000;
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 15px;
+  letter-spacing: 0.5px;
+  margin-bottom: 2.5rem;
+  padding: 0 1rem;
+}
+
+.button {
+  background: linear-gradient(90deg, #002164, #2e6ce9);
+  color: #ffffff;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: transform 0.2s;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.2s ease;
+  text-transform: uppercase;
 }
 
-.trackButton:active {
-  transform: scale(0.98);
+.button:hover {
+  opacity: 0.9;
 }
 
-/* --- Responsive Breakpoints --- */
+/* Responsive Breakpoints */
 
-/* Tablet & Large Phone (Medium) */
+/* Tablet & Smaller Desktops */
 @media (max-width: 1024px) {
-  .container {
-    padding: 40px;
-  }
-  .title {
-    font-size: 22px;
+  .heroImage {
+    max-width: 400px;
   }
 }
 
-/* Tablet (Portrait) & Small Screens */
+/* Medium Screens / Tablets */
 @media (max-width: 768px) {
-  .container {
-    padding: 30px;
-  }
   .title {
-    font-size: 19px;
-    max-width: 320px;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
   }
-  .badgeWrapper {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 30px;
-  }
-  .outerCircle {
-    width: 200px;
-    height: 200px;
-  }
-  .jaggedBadge {
-    width: 110px;
-    height: 110px;
+  .heroImage {
+    max-width: 350px;
   }
 }
 
-/* Phone (Small) */
+/* Phones */
 @media (max-width: 480px) {
-  .container {
-    padding: 20px;
-  }
   .title {
-    font-size: 17px;
+    font-size: 1.1rem;
   }
-  .trackButton {
-    width: 100%;
-    padding: 14px;
+  .heroImage {
+    max-width: 250px;
   }
-  .outerCircle {
-    width: 180px;
-    height: 180px;
+  .button {
+    width: 90%; /* Mobile friendly touch target */
+    padding: 14px 20px;
+  }
+  .wrapper {
+    min-height: auto;
+    padding: 40px 0px;
+      min-height: 70vh;
   }
 }
