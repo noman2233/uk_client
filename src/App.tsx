@@ -7,7 +7,7 @@ import ResetPassword from "./pages/auth/ResetPassword";
 import ProductDeatil from "./pages/ProductDetail/ProductDetail";
 import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
  import Contact from "./pages/Contact/Contact";
-import AboutUs from "./pages/About/About";
+import About from "./pages/About/About";
 import TermsAndConditions from "./pages/LegalPges/TermsAndConditions";
 import PrivacyPolicy from "./pages/LegalPges/PrivacyPolicy";
 import ShippingPolicy from "./pages/LegalPges/ShippingPolicy";
@@ -30,7 +30,7 @@ const App: React.FC = () => {
           <Route path="/product/:id" element={<ProductDeatil />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<AboutUs />} />
+          <Route path="/about" element={<About />} />
           <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/shiping-policy" element={<ShippingPolicy />} />

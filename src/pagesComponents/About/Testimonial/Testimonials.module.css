@@ -1,0 +1,197 @@
+.container {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+/* Embla Core */
+.embla {
+  overflow: hidden;
+  cursor: grab;
+}
+
+.emblaContainer {
+  display: flex;
+}
+
+.emblaSlide {
+  flex: 0 0 33.333%; /* Default 3 columns */
+  min-width: 0;
+  padding: 0 15px;
+}
+
+/* Card Styling */
+.card {
+  height: 100%;
+  padding: 0px 30px;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 380px;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(215, 215, 215, 0.992);
+}
+
+.card:hover {
+  background: linear-gradient(180deg, #001f3f 0%, #004080 100%);
+  color: #ffffff;
+  border: none;
+}
+.lightCard {
+  background: #ffffff;
+
+  color: #333;
+}
+
+.darkCard {
+  /* background: linear-gradient(180deg, #001f3f 0%, #004080 100%); */
+  color: #111111;
+  /* border: none; */
+  border: 1px solid #e0e0e0;
+}
+
+.quoteIcon {
+  margin-bottom: 20px;
+  opacity: 0.8;
+  color: var(--color-error);
+  font-size: 20px;
+}
+
+.darkCard .quoteIcon {
+  color: #fff;
+}
+.lightCard .quoteIcon {
+  color: #8b1a1a;
+} /* Dark red like screenshot */
+
+.reviewText {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Footer Section */
+.footer {
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+/* Navigation & Progress Bar */
+.navigation {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #d9b5b5; /* Light brown/red tint from image */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navBtnBlue {
+  /* background: #0056b3; */
+}
+
+.progressBar {
+  width: 95%;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  position: relative;
+}
+
+.progressFill {
+  position: absolute;
+  width: 30%; /* Logic for this can be added with emblaApi.scrollProgress() */
+  height: 100%;
+  /* background: #0056b3; */
+}
+
+/* --- Responsive Breakpoints --- */
+
+@media (max-width: 1024px) {
+  .emblaSlide {
+    flex: 0 0 50%; /* 2 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .emblaSlide {
+    flex: 0 0 100%; /* 1 column */
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    padding: 0px 10px;
+  }
+  .progressBar {
+    width: 90%;
+  }
+}
+
+@media (max-width: 430px) {
+  .card {
+    width: 88%;
+    padding: 0px 10px;
+  }
+  .progressBar {
+    width: 87%;
+  }
+  .container {
+    padding: 80px 10px 40px 10px;
+  }
+}
