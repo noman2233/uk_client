@@ -16,6 +16,8 @@ import Login from "./pages/auth/Login";
 import SignUp from "./pages/auth/SignUp";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import NotFound from "./pages/NotFound/NotFound";
+import OrderSuccess from "./pages/OrderSuccess/OrderSuccess";
+import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 
 const App: React.FC = () => {
   return (
@@ -31,11 +33,13 @@ const App: React.FC = () => {
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/order-success" element={<OrderSuccess />} />
           <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/shiping-policy" element={<ShippingPolicy />} />
+          <Route path="/shipping-policy" element={<ShippingPolicy />} />
           <Route path="/return-policy" element={<Returnpolicy />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="*" element={<NotFound/>} />

@@ -5,6 +5,7 @@
   color: #000000;
   font-family: "Inter", sans-serif;  
   /* width: 60%; */
+  border-top: 1px solid rgb(242, 242, 242);
 
 }
 .wrapper {
