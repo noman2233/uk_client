@@ -28,6 +28,12 @@ const Wishlist = () => {
   return (
     <div className={styles.container}>
       <div className={styles.contentCard}>
+        <h1 className={styles.title}>Wishlist</h1>
+        <div className={styles.emptyState}>
+          <p className={styles.emptyText}>
+            Your Wishlist Items will appear here.
+          </p>
+        </div>
         <div className={styles.tableWrapper}>
           <table className={styles.wishlistTable}>
             <thead className={styles.tableHeader}>

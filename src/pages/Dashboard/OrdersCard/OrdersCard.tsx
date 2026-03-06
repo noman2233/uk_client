@@ -1,23 +1,4 @@
-// import React from 'react';
-// import styles from './OrdersCard.module.css';
-
-// const OrdersCard = () => {
-//   return (
-//     <div className={styles.container}>
-//       <section className={styles.card}>
-//         <h1 className={styles.title}>Orders</h1>
-
-//         <div className={styles.emptyState}>
-//           <p className={styles.emptyText}>
-//             Your orders will appear here.
-//           </p>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default OrdersCard;
+ 
 
 import styles from "./OrdersCard.module.css";
 
