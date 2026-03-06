@@ -1,0 +1,101 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  width: 100%;}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+}
+
+/* Welcome Section */
+.welcomeBox {
+  background-color: #f8fafc;
+  padding: 24px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.welcomeTitle {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+}
+
+.welcomeText {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.welcomeText strong {
+  color: #334155;
+  font-weight: 600;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap; /* Critical for responsiveness */
+}
+
+.statCard {
+  flex: 1;
+  min-width: 200px; /* Prevents cards from getting too squished */
+  padding: 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Specific Card Colors */
+.totalOrders {
+  background-color: #fff5f8;
+}
+.pendingOrders {
+  background-color: #f0f9ff;
+}
+.wishlist {
+  background-color: #f0fdf4;
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Tablet & Mobile Adjustments */
+@media (max-width: 768px) {
+  .statsGrid {
+    gap: 12px;
+  }
+  .statCard {
+    flex: 1 1 calc(50% - 12px); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .statCard {
+    flex: 1 1 100%; /* 1 column on small phones */
+  }
+  .welcomeTitle {
+    font-size: 18px;
+  }
+}

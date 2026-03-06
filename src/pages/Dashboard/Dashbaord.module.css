@@ -1,0 +1,36 @@
+/* AccountDetails.module.css */
+.pageWrapper {
+  display: flex;
+  /* align-items: center; */
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+  max-width: 1200px;
+  margin: 60px  auto;
+  padding: 20px;
+  box-shadow: 20px 20px 20px rgba(170, 170, 170, 0.05);
+  border: 1px solid #f2f2f2;
+  border-radius: 12px;
+  gap: 20px;
+}
+
+/* Responsive Breakpoints */
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .mainContent {
+    padding: 1.5rem;
+  }
+}

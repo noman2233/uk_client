@@ -1,0 +1,107 @@
+.container {
+  min-height: 100vh;
+  background-color: #f4f7f6;
+  font-family: 'Inter', -apple-system, sans-serif;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contentCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1100px; /* Centered container for better readability */
+}
+
+/* Table Styling */
+.tableWrapper {
+  margin-top: 10px;
+  overflow-x: auto; /* Allows horizontal scrolling on small mobile screens */
+}
+
+.wishlistTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Ensures table doesn't look squashed */
+}
+
+.tableHeader {
+  background-color: #f8fafc;
+}
+
+.tableHeader th {
+  text-align: left;
+  padding: 18px 15px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.tableRow td {
+  padding: 20px 15px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #475569;
+  vertical-align: middle;
+}
+
+.productCell {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.productImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+.productName {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.stockStatus {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.actionBtn {
+  background-color: #7d5a50; /* Match NI DRIP branding */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.actionBtn:hover {
+  background-color: #63473f;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+  
+  .contentCard {
+    padding: 15px;
+  }
+
+  .tableRow td {
+    padding: 15px 10px;
+  }
+}

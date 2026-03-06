@@ -18,6 +18,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import NotFound from "./pages/NotFound/NotFound";
 import OrderSuccess from "./pages/OrderSuccess/OrderSuccess";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
+import AccountDetails from "./pages/Dashboard/Dashboard";
 
 const App: React.FC = () => {
   return (
@@ -42,6 +43,7 @@ const App: React.FC = () => {
           <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/dashboard" element={<AccountDetails />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </main>
