@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { CgLogIn } from "react-icons/cg";
 import { dark_logo, MENU_ITEMS } from "../../utils/data";
 import { scrollToSection } from "../../scroll";
+ import { IoIosArrowForward } from "react-icons/io";
 
 interface SideMenuProps {
   isMenuOpen: boolean;
@@ -64,6 +65,40 @@ const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </div>
             </Link>
           ))}
+              <Link
+            to="/about"
+            className={styles.navItem}
+            // onClick={() => setIsMenuOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              // scrollToSection(item.id);
+              setIsMenuOpen(false);
+            }}
+          >
+            <div className={styles.menuBox}>
+              <span className={styles.label}>About</span>
+              <span className={styles.icon}>
+                <IoIosArrowForward />
+              </span>
+            </div>
+          </Link>
+          <Link
+            to="/dashboard"
+            className={styles.navItem}
+            // onClick={() => setIsMenuOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              // scrollToSection(item.id);
+              setIsMenuOpen(false);
+            }}
+          >
+            <div className={styles.menuBox}>
+              <span className={styles.label}>Dashbaord</span>
+              <span className={styles.icon}>
+                <IoIosArrowForward />
+              </span>
+            </div>
+          </Link>
           <div className={styles.footer}>
             <Link to="/login">
               <button
