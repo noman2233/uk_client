@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { CgLogIn } from "react-icons/cg";
 import { dark_logo, MENU_ITEMS } from "../../utils/data";
 import { scrollToSection } from "../../scroll";
- import { IoIosArrowForward } from "react-icons/io";
 
 interface SideMenuProps {
   isMenuOpen: boolean;
@@ -47,7 +46,7 @@ const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
         {/* Navigation */}
         <nav className={styles.navLinks}>
-          {MENU_ITEMS.map((item) => (
+          {/* {MENU_ITEMS.map((item) => (
             <Link
               key={item.label}
               to={item.path}
@@ -64,41 +63,34 @@ const SideMenu: React.FC<SideMenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 <span className={styles.icon}>{<item.icon />}</span>
               </div>
             </Link>
-          ))}
+          ))} */}
+          {MENU_ITEMS.map((item) => {
+            // 1. Determine if this is a separate page (like /about or /dashboard)
+            const isExternalPage = item.path !== "/";
+
+            return (
               <Link
-            to="/about"
-            className={styles.navItem}
-            // onClick={() => setIsMenuOpen(false)}
-            onClick={(e) => {
-              e.preventDefault();
-              // scrollToSection(item.id);
-              setIsMenuOpen(false);
-            }}
-          >
-            <div className={styles.menuBox}>
-              <span className={styles.label}>About</span>
-              <span className={styles.icon}>
-                <IoIosArrowForward />
-              </span>
-            </div>
-          </Link>
-          <Link
-            to="/dashboard"
-            className={styles.navItem}
-            // onClick={() => setIsMenuOpen(false)}
-            onClick={(e) => {
-              e.preventDefault();
-              // scrollToSection(item.id);
-              setIsMenuOpen(false);
-            }}
-          >
-            <div className={styles.menuBox}>
-              <span className={styles.label}>Dashbaord</span>
-              <span className={styles.icon}>
-                <IoIosArrowForward />
-              </span>
-            </div>
-          </Link>
+                key={item.label}
+                // If it's an external page, use the path. If it's a scroll section, keep it at "/"
+                to={item.path}
+                className={styles.navItem}
+                onClick={(e) => {
+                  if (!isExternalPage) {
+                    // 2. Only prevent default and scroll if it's a section on the same page
+                    e.preventDefault();
+                    scrollToSection(item.id);
+                  }
+                  // Always close the menu regardless of the link type
+                  setIsMenuOpen(false);
+                }}
+              >
+                <div className={styles.menuBox}>
+                  <span className={styles.label}>{item.label}</span>
+                  <span className={styles.icon}>{<item.icon />}</span>
+                </div>
+              </Link>
+            );
+          })}
           <div className={styles.footer}>
             <Link to="/login">
               <button

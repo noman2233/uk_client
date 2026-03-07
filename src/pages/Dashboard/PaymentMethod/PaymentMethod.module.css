@@ -42,11 +42,7 @@
 }
 
 .saveBtn {
-  background: linear-gradient(
-    90deg,
-    #ec4899,
-    #1fcf31
-  ); /* Gradient from 'Save Changes' button */
+  background: var(--color-lightBrown); 
   color: white;
   border: none;
   padding: 14px 30px;

@@ -48,7 +48,7 @@
 /* Active Home Button */
 
 .active {
-  background: var(--gradient-wood);
+  background: var(--color-lightBrown);
   color: #fff;
   padding: 10px 20px;
   border-radius: 8px;

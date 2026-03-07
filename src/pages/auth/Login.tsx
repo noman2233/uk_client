@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form } from "formik";
 import styles from "./ResetPassword.module.css";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 // interface FormValues {
 //   password: "";
@@ -54,13 +55,34 @@ const Login: React.FC = () => {
               isSubmitting,
             }) => (
               <Form className={styles.form}>
+                    <div className={styles.inputGroup}>
+                  <label>Enter Your Email</label>
+                  <div className={styles.inputWrapper}>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.email}
+                      className={
+                        touched.email && errors.email ? styles.errorInput : ""
+                      }
+                    />
+                    {/* <span className={styles.eyeIcon}>👁️</span> */}
+                  </div>
+
+                  {touched.email && errors.email && (
+                    <span className={styles.errorText}>{errors.email}</span>
+                  )}
+                </div>
                 <div className={styles.inputGroup}>
-                  <label>New Password</label>
+                  <label>Enter Your password</label>
                   <div className={styles.inputWrapper}>
                     <input
                       type="password"
                       name="password"
-                      placeholder="Enter new password"
+                      placeholder="Enter Your password"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.password}
@@ -78,28 +100,13 @@ const Login: React.FC = () => {
                     <span className={styles.errorText}>{errors.password}</span>
                   )}
                 </div>
+            
 
-                <div className={styles.inputGroup}>
-                  <label>Confirm New Password</label>
-                  <div className={styles.inputWrapper}>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Enter your email"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.email}
-                      className={
-                        touched.email && errors.email ? styles.errorInput : ""
-                      }
-                    />
-                    {/* <span className={styles.eyeIcon}>👁️</span> */}
-                  </div>
-                  {touched.email && errors.email && (
-                    <span className={styles.errorText}>{errors.email}</span>
-                  )}
-                </div>
-
+                <p className={styles.forgotpassword}>
+                  <span>
+                    <Link to="/reset-password">Forgot Password </Link>
+                  </span>
+                </p>
                 <button
                   type="submit"
                   className={styles.submitBtn}
@@ -107,6 +114,12 @@ const Login: React.FC = () => {
                 >
                   {isSubmitting ? "Updating..." : "Continue"}
                 </button>
+                <p className={styles.bottonLink}>
+                  Don't have an anooount?
+                  <span>
+                    <Link to="/signup">Register </Link>
+                  </span>
+                </p>
               </Form>
             )}
           </Formik>

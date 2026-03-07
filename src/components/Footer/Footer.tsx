@@ -7,12 +7,12 @@ const quickLinks = [
   { name: "Products", path: "/products" },
   { name: "About Us", path: "/about" },
   { name: "Contact Us", path: "/contact" },
-  { name: "Privacy Policy", path: "/privacy" },
+  { name: "Privacy Policy", path: "/privacy-policy" },
   { name: "Terms & Conditions", path: "/terms" },
-  { name: "Shipping Policy", path: "/shipping" },
-  { name: "Refund Policy", path: "/refund" },
+  { name: "Shipping Policy", path: "/shipping-policy" },
+  { name: "Refund Policy", path: "/return-policy" },
   { name: "Company Details", path: "/details" },
-  { name: "Affiliate Program", path: "/affiliate" },
+  // { name: "Affiliate Program", path: "/affiliate" },
 ];
 
 const latestForSale = [

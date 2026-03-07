@@ -19,47 +19,71 @@ export const contact_para = `  Are you ready to take your project to the next le
               you're looking for a new website, a web application, or simply
       need advice.`;
 
+import { IoIosArrowForward } from "react-icons/io";
 
-
-      import { IoIosArrowForward } from "react-icons/io";
-
+// export const MENU_ITEMS = [
+//   {
+//     label: "Home",
+//     id: "home",
+//     path: "/",
+//     icon: IoIosArrowForward,
+//   },
+//   {
+//     label: "Products",
+//     id: "products",
+//     path: "/",
+//     icon: IoIosArrowForward,
+//   },
+//   {
+//     label: "Shop",
+//     id: "shop",
+//     path: "/",
+//     icon: IoIosArrowForward,
+//   },
+//   // {
+//   //   label: "About",
+//   //   id: "about",
+//   //   path: "/",
+//   //   icon: IoIosArrowForward,
+//   // },
+//   {
+//     label: "Contact",
+//     id: "contact",
+//     path: "/",
+//     icon: IoIosArrowForward,
+//   },
+//   {
+//     label: "FAQs",
+//     id: "faqs",
+//     path: "/",
+//     icon: IoIosArrowForward,
+//   },
+//   {
+//     label: "Testimonials",
+//     id: "testimonials",
+//     path: "/",
+//     icon: IoIosArrowForward,
+//   },
+//   {
+//     label: "Login",
+//     id: "login",
+//     path: "/",
+//     icon: IoIosArrowForward,
+//   },
+//   // {
+//   //   label: "SignUp",
+//   //   id: "signup",
+//   //   path: "/",
+//   //   icon: IoIosArrowForward,
+//   // },
+// ];
 export const MENU_ITEMS = [
-  {
-    label: "Home",
-    id: "home",
-    path: "/",
-    icon: IoIosArrowForward,
-  },
-  {
-    label: "Products",
-    id: "products",
-    path: "/",
-    icon: IoIosArrowForward,
-  },
-  {
-    label: "Shop",
-    id: "shop",
-    path: "/",
-    icon: IoIosArrowForward,
-  },
-  {
-    label: "About",
-    id: "about",
-    path: "/",
-    icon: IoIosArrowForward,
-  },
-  {
-    label: "Contact",
-    id: "contact",
-    path: "/",
-    icon: IoIosArrowForward,
-  },
-  {
-    label: "FAQs",
-    id: "faqs",
-    path: "/",
-    icon: IoIosArrowForward,
-  },
+  { label: "Home", id: "home", path: "/", icon: IoIosArrowForward },
+  { label: "Products", id: "products", path: "/", icon: IoIosArrowForward },
+  { label: "Shop", id: "shop", path: "/", icon: IoIosArrowForward },
+  { label: "About", id: "about", path: "/about", icon: IoIosArrowForward }, // Path changed
+  { label: "Contact", id: "contact", path: "/", icon: IoIosArrowForward },
+  { label: "FAQs", id: "faqs", path: "/", icon: IoIosArrowForward },
   {
     label: "Testimonials",
     id: "testimonials",
@@ -67,19 +91,13 @@ export const MENU_ITEMS = [
     icon: IoIosArrowForward,
   },
   {
-    label: "Login",
-    id: "login",
-    path: "/",
+    label: "Dashboard",
+    id: "dashboard",
+    path: "/dashboard",
     icon: IoIosArrowForward,
   },
-  {
-    label: "SignUp",
-    id: "signup",
-    path: "/",
-    icon: IoIosArrowForward,
-  },
+  { label: "Login", id: "login", path: "login", icon: IoIosArrowForward },
 ];
-
 
 export const TERMS_DATA = [
   {

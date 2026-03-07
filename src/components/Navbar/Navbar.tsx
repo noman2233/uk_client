@@ -6,11 +6,13 @@ import { app_logo, MENU_ITEMS } from "../../utils/data";
 import SideMenu from "../SideMenu/SideMenu";
 import CheckoutSidebar from "../CheckoutSidebar/CheckoutSidebar";
 import { scrollToSection } from "../../scroll";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [openCheckout, setOpenCheckout] = useState<boolean>(false);
-
+  const location = useLocation();
+  const navigate = useNavigate();
   return (
     <>
       <header className={styles.header}>
@@ -21,7 +23,7 @@ const Navbar = () => {
           </div>
 
           {/* <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}> */}
-          <nav className={`${styles.nav}`}>
+          {/* <nav className={`${styles.nav}`}>
             {MENU_ITEMS.map((item, index) => (
               <a
                 key={index}
@@ -38,6 +40,54 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
+               
+        
+          </nav> */}
+          <nav className={styles.nav}>
+            {MENU_ITEMS.map((item, index) => {
+              // Check if the item is a separate page or a scroll section
+              const isAPage = item.path !== "/";
+
+              if (isAPage) {
+                return (
+                  <Link
+                    key={index}
+                    to={item.path}
+                    className={`${styles.link} ${
+                      location.pathname === item.path ? styles.active : ""
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              }
+
+              return (
+                <a
+                  key={index}
+                  href={`#${item.id}`}
+                  className={`${styles.link} ${
+                    item.label === "Home" ? styles.active : ""
+                  }`}
+                  onClick={(e) => {
+                    e.preventDefault();
+
+                    // If the user is NOT on the home page, go home first, then scroll
+                    if (location.pathname !== "/") {
+                      navigate("/");
+                      setTimeout(() => scrollToSection(item.id), 100);
+                    } else {
+                      scrollToSection(item.id);
+                    }
+
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
           </nav>
 
           <div className={styles.right}>

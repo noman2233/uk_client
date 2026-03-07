@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form } from "formik";
 import styles from "./ResetPassword.module.css";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 // interface FormValues {
 //   password: "";
@@ -40,7 +41,7 @@ const SignUp: React.FC = () => {
         <div className={styles.passwordCard}>
           <h2 className={styles.title}>Create You Account</h2>
           <p className={styles.subtitle}>
-           Create an account to save your progress
+            Create an account to save your progress
           </p>
 
           <Formik
@@ -97,17 +98,13 @@ const SignUp: React.FC = () => {
                       onBlur={handleBlur}
                       value={values.email}
                       className={
-                        touched.email && errors.email
-                          ? styles.errorInput
-                          : ""
+                        touched.email && errors.email ? styles.errorInput : ""
                       }
                     />
                     {/* <span className={styles.eyeIcon}>👁️</span> */}
                   </div>
                   {touched.email && errors.email && (
-                    <span className={styles.errorText}>
-                      {errors.email}
-                    </span>
+                    <span className={styles.errorText}>{errors.email}</span>
                   )}
                 </div>
                 <div className={styles.inputGroup}>
@@ -129,9 +126,7 @@ const SignUp: React.FC = () => {
                     {/* <span className={styles.eyeIcon}>👁️</span> */}
                   </div>
                   {touched.password && errors.password && (
-                    <span className={styles.errorText}>
-                      {errors.password}
-                    </span>
+                    <span className={styles.errorText}>{errors.password}</span>
                   )}
                 </div>
                 <div className={styles.inputGroup}>
@@ -165,6 +160,12 @@ const SignUp: React.FC = () => {
                 >
                   {isSubmitting ? "Updating..." : "Continue"}
                 </button>
+                <p className={styles.bottonLink}>
+                  Already have an account?
+                  <span>
+                    <Link to="/login">Login</Link>
+                  </span>
+                </p>
               </Form>
             )}
           </Formik>
